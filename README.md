@@ -6,7 +6,7 @@ Customized jQuery plugins for [wootocracy.com](http://wootocracy.com)
 Documentation
 -------------
 
-You can find the documentation (made with Docco) [here](docs/).
+You can find the documentation (made with Docco) [here](http://peterschmiz.github.io/wootocracy-jquery-plugins).
 
 
 Description
