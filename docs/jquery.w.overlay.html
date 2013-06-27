@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.overlay.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.overlay.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy overlay plugin</strong>.</p>
+<p><a href="jquery.w.map.html">Previous Plugin</a> | <a href="jquery.w.pager.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 15:02:55 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wOverlay();</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Overlay plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Overlay callback function</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			callback: <span class="function"><span class="keyword">function</span> <span class="params">(result)</span> {</span> }
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Pre-fill datas</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			fill: [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Contents datas</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			contents: [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Overlay params</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			params: [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>From history</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			history: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Scroll top position</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			scrollTop: <span class="number">0</span>,
+			$wrapper: <span class="literal">null</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Bind click event to every link or DOM element<br>which has <code>data-overlay</code> attribute</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.$wrapper.on({
+				<span class="string">'click.woverlay touchstart.woverlay'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.preventDefault();
+					loadOverlay($(e.currentTarget), vars, options);
+				}
+			}, <span class="string">'[data-overlay]'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Load overlay</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		loadOverlay = <span class="function"><span class="keyword">function</span> <span class="params">($elem, vars, options)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Get the URL to load</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">var</span> href = $.trim($elem.attr(<span class="string">'href'</span>)),</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Get the overlay type</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				type = $.trim($elem.attr(<span class="string">'data-overlay'</span>)) || <span class="string">'default'</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Reset everything</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.params = [];
+			vars.fill = [];
+			vars.contents = [];
+			vars.history = <span class="literal">false</span>;
+			vars.scrollTop = $(window).scrollTop();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Check for params</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> ($elem.attr(<span class="string">'data-overlay-params'</span>) !== <span class="literal">undefined</span>) {
+				vars.params = $elem.attr(<span class="string">'data-overlay-params'</span>).split(<span class="string">'|'</span>);
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Check for contents</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> ($elem.attr(<span class="string">'data-overlay-contents'</span>) !== <span class="literal">undefined</span>) {
+				vars.contents = $elem.attr(<span class="string">'data-overlay-contents'</span>).split(<span class="string">'|'</span>);
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Check for pre-fill values</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> ($elem.attr(<span class="string">'data-overlay-fill'</span>) !== <span class="literal">undefined</span>) {
+				vars.fill = $elem.attr(<span class="string">'data-overlay-fill'</span>).split(<span class="string">'|'</span>);
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Load actual content</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loadTemplate(href, type, vars, options, $elem);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Load overlay template</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		loadTemplate = <span class="function"><span class="keyword">function</span> <span class="params">(href, type, vars, options, $elem)</span> {</span>
+			<span class="keyword">var</span> $html = $(<span class="string">'html'</span>),
+				data = {},
+				temp = [],
+				$item = <span class="literal">null</span>,
+				$result = <span class="literal">null</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>If not disabled, then show loading animation</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> ($.inArray(<span class="string">'noloading'</span>, vars.params) === -<span class="number">1</span>) { $html.addClass(<span class="string">'overlay-loading'</span>); }
+			<span class="keyword">if</span> ($.inArray(<span class="string">'nohistory'</span>, vars.params) !== -<span class="number">1</span>) { vars.history = <span class="literal">true</span>; }
+
+			$.ajax({
+				type: <span class="string">'GET'</span>,
+				dataType: <span class="string">'html'</span>,
+				url: href,
+				success: <span class="function"><span class="keyword">function</span> <span class="params">(result)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Check for disabled scroll</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					<span class="keyword">if</span> ($.inArray(<span class="string">'noclass'</span>, vars.params) === -<span class="number">1</span>) {
+						$html.addClass(<span class="string">'noscroll'</span>);
+					} <span class="keyword">else</span> {
+						$html.removeClass(<span class="string">'noscroll'</span>);
+					}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Remove loading</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					$html.removeClass(<span class="string">'overlay-loading'</span>);
+					$result = $(result);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>If there are pre-fill values, then apply them</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					<span class="keyword">if</span> (vars.fill !== <span class="literal">undefined</span>) {
+						<span class="keyword">if</span> (vars.fill.length &gt; <span class="number">0</span>) {
+							$.each(vars.fill, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Get inputs by name, parsed from the values</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>								temp = v.split(<span class="string">':'</span>);
+								$item = $result.find(<span class="string">'input[name="'</span> + temp[<span class="number">0</span>] + <span class="string">'"]'</span>);
+								<span class="keyword">if</span> (temp[<span class="number">0</span>] !== <span class="string">'picture'</span>) {
+									$item.val(temp[<span class="number">1</span>]);
+								} <span class="keyword">else</span> {
+									temp.shift();
+									<span class="keyword">if</span> (temp.length &gt; <span class="number">1</span>) { temp[<span class="number">0</span>] = temp[<span class="number">0</span>] + <span class="string">':'</span>; }
+									data.picture = temp.join(<span class="string">''</span>);
+								}
+							});
+						}
+					}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>If there are contents, then apply them</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					<span class="keyword">if</span> (vars.contents !== <span class="literal">undefined</span>) {
+						<span class="keyword">if</span> (vars.contents.length &gt; <span class="number">0</span>) {
+							$.each(vars.contents, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+								temp = v.split(<span class="string">':'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Get items by jQuery selector</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>								$item = $result.find(temp[<span class="number">0</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Replace inner text</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>								$item.text(temp[<span class="number">1</span>].replace(<span class="regexp">/#/ig</span>, <span class="string">':'</span>));
+							});
+						}
+					}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Call callback function</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					options.callback.call(<span class="keyword">this</span>, <span class="literal">true</span>, type, $result, $elem, href, data, vars.history, vars.scrollTop);
+				},
+				error: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					vars.$overlay = <span class="literal">null</span>;
+					options.callback.call(<span class="keyword">this</span>, <span class="literal">false</span>, vars.scrollTop);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {
+
+			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wOverlay'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wOverlay'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wOverlayVars'</span>, vars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						initBindings(vars, options);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Load overlay<br><em>href:</em> overlay URL, <code>String</code><br><em>type:</em> overlay type, <code>String</code><br><em>contents:</em> overlay contents, <code>Array</code><br><em>fill:</em> overlay pre-fill values, <code>Array</code>˛ 
+<em>history:</em> initiated from history, <code>Boolean</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			load: <span class="function"><span class="keyword">function</span> <span class="params">(href, type, params, contents, fill, history)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wOverlay'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wOverlayVars'</span>);
+					vars.params = [];
+					vars.contents = [];
+					vars.fill = [];
+					<span class="keyword">if</span> (params !== <span class="literal">undefined</span>) { vars.params = params; }
+					<span class="keyword">if</span> (contents !== <span class="literal">undefined</span>) { vars.contents = contents; }
+					<span class="keyword">if</span> (fill !== <span class="literal">undefined</span>) { vars.fill = fill; }
+					vars.history = history !== <span class="literal">undefined</span>;
+					loadTemplate(href, type, vars, options);
+				});
+			}
+
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wOverlay</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wOverlay: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wOverlay'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

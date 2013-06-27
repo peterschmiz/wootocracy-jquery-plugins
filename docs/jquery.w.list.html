@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.list.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.list.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy card list plugin</strong>.</p>
+<p><a href="jquery.w.conditionalbottom.html">Previous Plugin</a> | <a href="jquery.w.map.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 08:32:44 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wList();</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Card list plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Default card template wrapper</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			cardTemplate: <span class="string">'&lt;div class="card"&gt;&lt;/div&gt;'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Category click callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			categoryCallback: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Default column template wrapper</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			columnTemplate: <span class="string">'&lt;div class="card-column"&gt;&lt;/div&gt;'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Image load on init limit</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			imageLoadLimit: <span class="number">15</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Image lazy load enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			lazyLoadEnabled: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Lazy load delay</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			lazyLoadTime: <span class="number">3000</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Reset list or not</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			noreset: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Clarify (unknown) callback (category, brand or name)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			unknownActionCallback: <span class="function"><span class="keyword">function</span> <span class="params">($elem)</span> {</span> },</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Standalone list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			standAlone: <span class="literal">false</span>
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Cards array</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			cards: [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Columns array</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			columns: [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Current card index</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			index: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Current column index</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			currentColumn: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Image load queue</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			imageQueue: [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Lazy load timer id (<code>window.setTimeout</code> ID)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			lazyLoadTid: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Resize timer id (<code>window.setTimeout</code> ID) </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			resizeTid: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Visible columns number</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			visibleColumns: <span class="number">3</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Main wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$wrapper: <span class="literal">null</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Init list columns</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initColumns = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> i = <span class="number">0</span>,
+				$columnHtml = <span class="literal">null</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Get column number (based on the available width)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.visibleColumns = getColumnNumber();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Get wrapper offset position</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.wrapperOffset = vars.$wrapper.offset().top;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Get window height</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.winH = $(window).height();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Reset columns array</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.columns = [];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>If reset is enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (options.noreset !== <span class="literal">true</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Empty list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				vars.$wrapper.empty();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Rebuild columns</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">for</span> (i; i &lt; vars.visibleColumns; i++) {
+					$columnHtml = $(options.columnTemplate);
+					vars.$wrapper.append($columnHtml);
+					vars.columns.push($columnHtml);
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			$(window).on({
+				<span class="string">'resize.wlist'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					window.clearTimeout(vars.resizeTid);
+					vars.resizeTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						refreshLayout(vars, options);
+					}, <span class="number">50</span>);
+				}
+			});
+			vars.$wrapper.on({
+				<span class="string">'mouseover.wlist'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					showUnknownInfo($(e.currentTarget));
+				},
+				<span class="string">'mouseleave.wlist'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					hideUnknownInfo($(e.currentTarget));
+				},
+				<span class="string">'click.wlist'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					unknownAction(options, $(e.currentTarget));
+				}
+			}, <span class="string">'.unknown'</span>);
+			vars.$wrapper.on({
+				<span class="string">'click.wlist'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					categoryAction(options, $(e.currentTarget));
+				}
+			}, <span class="string">'.card-category:not(.unknown)'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Show unknown hover infos</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		showUnknownInfo = <span class="function"><span class="keyword">function</span> <span class="params">($elem)</span> {</span>
+			<span class="keyword">var</span> type = $elem.attr(<span class="string">'data-clarify'</span>);
+			<span class="keyword">if</span> (type === <span class="string">'brand'</span>) {
+				$elem.text(<span class="string">'→ Add brand'</span>);
+			} <span class="keyword">else</span> <span class="keyword">if</span> (type === <span class="string">'subcategory'</span>) {
+				$elem.text(<span class="string">'→ Add subcategory'</span>);
+			} <span class="keyword">else</span> {
+				$elem.text(<span class="string">'Add name'</span>);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Hide unknown hover infos</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		hideUnknownInfo = <span class="function"><span class="keyword">function</span> <span class="params">($elem)</span> {</span>
+			<span class="keyword">var</span> type = $elem.attr(<span class="string">'data-clarify'</span>);
+			<span class="keyword">if</span> (type === <span class="string">'brand'</span>) {
+				$elem.text(<span class="string">'Brand'</span>);
+			} <span class="keyword">else</span> <span class="keyword">if</span> (type === <span class="string">'subcategory'</span>) {
+				$elem.text(<span class="string">'Subcategory'</span>);
+			} <span class="keyword">else</span> {
+				$elem.text(<span class="string">'Name'</span>);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Call unknown callback action </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		unknownAction = <span class="function"><span class="keyword">function</span> <span class="params">(options, $elem)</span> {</span>
+			options.unknownActionCallback.call(<span class="keyword">this</span>, $elem);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Category click action </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		categoryAction = <span class="function"><span class="keyword">function</span> <span class="params">(options, $elem)</span> {</span>
+			<span class="keyword">var</span> category = $elem.attr(<span class="string">'data-category'</span>) || <span class="string">''</span>,
+				subcategory = <span class="string">'&amp;subcategory='</span> + $elem.attr(<span class="string">'data-subcategory'</span>) || <span class="string">''</span>,
+				url = <span class="string">'/index/categories?category='</span> + category + subcategory;
+			<span class="keyword">if</span> (options.categoryCallback !== <span class="literal">null</span>) {
+				options.categoryCallback.call(<span class="keyword">this</span>, $elem);
+			} <span class="keyword">else</span> {
+				<span class="keyword">if</span> (category !== <span class="string">''</span>) {
+					window.location.href = url;
+				} <span class="keyword">else</span> {
+					window.location.href = <span class="string">'/index/search?term='</span> + $elem.text() + <span class="string">'&amp;subcategory='</span> + $elem.text();
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Get available columns number</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		getColumnNumber = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+			<span class="keyword">var</span> winW = document.body.clientWidth,
+				cols = <span class="number">0</span>,
+				$html = $(<span class="string">'html'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Calculate column number</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (winW &lt;= <span class="number">747</span>) {
+				cols = <span class="number">2</span>;
+			} <span class="keyword">else</span> <span class="keyword">if</span> (winW &gt; <span class="number">747</span> &amp;&amp; winW &lt; <span class="number">991</span>) {
+				cols = <span class="number">3</span>;
+			} <span class="keyword">else</span> <span class="keyword">if</span> (winW &gt;= <span class="number">991</span> &amp;&amp; winW &lt; <span class="number">1234</span>) {
+				cols = <span class="number">4</span>;
+			} <span class="keyword">else</span> <span class="keyword">if</span> (winW &gt;= <span class="number">1234</span> &amp;&amp; winW &lt; <span class="number">1477</span>) {
+				cols = <span class="number">5</span>;
+			} <span class="keyword">else</span> <span class="keyword">if</span> (winW &gt;= <span class="number">1477</span> &amp;&amp; winW &lt; <span class="number">1720</span>) {
+				cols = <span class="number">6</span>;
+			} <span class="keyword">else</span> <span class="keyword">if</span> (winW &gt;= <span class="number">1720</span>) {
+				cols = <span class="number">7</span>;
+			} <span class="keyword">else</span> {
+				cols = <span class="number">8</span>;
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>If sidebar is optional, then reduce column number, but only if column<br>number was greater then 3 (because below 3 column the sidebar is<br>always optional</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> ($html.hasClass(<span class="string">'sidebar-optional'</span>) === <span class="literal">false</span> &amp;&amp; cols &gt; <span class="number">3</span>) {
+				cols = cols - <span class="number">1</span>;
+			}
+
+			<span class="keyword">return</span> cols;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Refresh layout, column numbers, re-build list </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		refreshLayout = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, force)</span> {</span>
+			<span class="keyword">var</span> diff = getColumnNumber() - vars.visibleColumns;
+
+			<span class="keyword">if</span> (diff !== <span class="number">0</span> || force === <span class="literal">true</span>) {
+
+				vars.visibleColumns = getColumnNumber();
+
+				<span class="keyword">if</span> (diff &lt; <span class="number">0</span>) {
+					removeExtraColumns(vars, options, Math.abs(diff));
+				} <span class="keyword">else</span> {
+					addExtraColumns(vars, options, diff);
+				}
+
+				vars.currentColumn = <span class="number">0</span>;
+				buildList(vars, options);
+			}
+
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>Remove unneccesary columns</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		removeExtraColumns = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, diff)</span> {</span>
+			<span class="keyword">var</span> i = <span class="number">0</span>,
+				$toRemove;
+			<span class="keyword">for</span> (i; i &lt; diff; i++) {
+				$toRemove = vars.columns.pop();
+				$toRemove.remove();
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>Add extra columns</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		addExtraColumns = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, diff)</span> {</span>
+			<span class="keyword">var</span> i = <span class="number">0</span>,
+				$toAdd;
+			<span class="keyword">for</span> (i; i &lt; diff; i++) {
+				$toAdd = $(options.columnTemplate);
+				vars.$wrapper.append($toAdd);
+				vars.columns.push($toAdd);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <p>Build columns, build cards, build the list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		buildList = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, data, reset, voteAction)</span> {</span>
+			<span class="keyword">var</span> cards,
+				cardList = [],
+				$card,
+				i;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <p>If the list was reseted</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (reset === <span class="literal">true</span>) {
+				vars.index = <span class="number">0</span>;
+				vars.cards = [];
+				vars.currentColumn = <span class="number">0</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-44">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-44">&#182;</a>
+              </div>
+              <p>Re-init columns</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				initColumns(vars, options);
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-45">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-45">&#182;</a>
+              </div>
+              <p>If external data was supplied</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (data !== <span class="literal">undefined</span>) {
+				cards = data.data;
+			} <span class="keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-46">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-46">&#182;</a>
+              </div>
+              <p>Use the available card data and sort them by id</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				vars.cards.sort(<span class="function"><span class="keyword">function</span> <span class="params">(a, b)</span> {</span>
+					<span class="keyword">return</span> parseInt($(a).attr(<span class="string">'data-card-id'</span>), <span class="number">10</span>) - parseInt($(b).attr(<span class="string">'data-card-id'</span>), <span class="number">10</span>);
+				});
+				cards = vars.cards;
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-47">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-47">&#182;</a>
+              </div>
+              <p>Generate card elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; cards.length; i++) {
+				vars.index++;
+				<span class="keyword">if</span> (data !== <span class="literal">undefined</span>) {
+					$card = generateCard(vars, options, cards[i], vars.index, i, voteAction);
+					<span class="keyword">if</span> ($card !== <span class="literal">false</span>) {
+						vars.cards.push($card);
+					}
+				} <span class="keyword">else</span> {
+					$card = cards[i];
+				}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-48">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-48">&#182;</a>
+              </div>
+              <p>If the column isn&#39;t created yet, then create one</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">if</span> (cardList[vars.currentColumn % vars.visibleColumns] === <span class="literal">undefined</span>) {
+					cardList[vars.currentColumn % vars.visibleColumns] = $();
+				}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-49">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-49">&#182;</a>
+              </div>
+              <p>Push the card into the correct cardList slot</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				cardList[vars.currentColumn % vars.visibleColumns] = cardList[vars.currentColumn % vars.visibleColumns].add($card);
+				vars.currentColumn++;
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-50">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-50">&#182;</a>
+              </div>
+              <p>Sort and append card lists into columns</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; cardList.length; i++) {
+				<span class="keyword">if</span> (cardList[i] !== <span class="literal">undefined</span>) {
+					cardList[i] = sortCardList(cardList[i]);
+					vars.columns[i].append(cardList[i]);
+				}
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-51">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-51">&#182;</a>
+              </div>
+              <p>If image lazy load is enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (options.lazyLoadEnabled === <span class="literal">true</span>) {
+				window.clearTimeout(vars.lazyLoadTid);
+				vars.lazyLoadTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-52">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-52">&#182;</a>
+              </div>
+              <p>Load images</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					lazyLoadImages(vars);
+				}, options.lazyLoadTime);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-53">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-53">&#182;</a>
+              </div>
+              <p>Lazy load images</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		lazyLoadImages = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">var</span> img,
+				$img;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-54">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-54">&#182;</a>
+              </div>
+              <p>If there is anything to load</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">while</span> (vars.imageQueue.length &gt; <span class="number">0</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-55">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-55">&#182;</a>
+              </div>
+              <p>Get one</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				img = vars.imageQueue.pop();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-56">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-56">&#182;</a>
+              </div>
+              <p>Find target <code>&lt;img&gt;</code> tag</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				$img = vars.$wrapper.find(<span class="string">'.card[data-card-id="'</span> + img.id + <span class="string">'"] .card-img img'</span>).eq(<span class="number">0</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-57">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-57">&#182;</a>
+              </div>
+              <p>Set <code>src</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				$img.attr(<span class="string">'src'</span>, $img.attr(<span class="string">'data-src'</span>));
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-58">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-58">&#182;</a>
+              </div>
+              <p>Sort card list by id</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		sortCardList = <span class="function"><span class="keyword">function</span> <span class="params">(list)</span> {</span>
+			list.sort(<span class="function"><span class="keyword">function</span> <span class="params">(a, b)</span> {</span>
+				<span class="keyword">return</span> parseInt($(a).attr(<span class="string">'data-card-id'</span>), <span class="number">10</span>) - parseInt($(b).attr(<span class="string">'data-card-id'</span>), <span class="number">10</span>);
+			});
+			<span class="keyword">return</span> list;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-59">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-59">&#182;</a>
+              </div>
+              <p>Generate card template<br><em>vars:</em> plugin vars, <code>Object</code><br><em>options:</em> plugin options, <code>Object</code><br><em>data:</em> card data, <code>Object</code><br><em>index:</em> current card index, <code>Number</code><br><em>localIndex:</em> current card index in the column, <code>Number</code><br><em>voteAction:</em> vote type on the card, <code>String</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		generateCard = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, data, index, localIndex, voteAction)</span> {</span>
+			<span class="keyword">var</span> card,
+				id = data.product_id || data._id,
+				name = data.name || <span class="string">'Name'</span>,
+				nameClass,
+				picture = data.picture,
+				pictureSrc = picture.src !== <span class="literal">undefined</span> ? (picture.src.search(<span class="regexp">/^https?:\/\//i</span>) !== -<span class="number">1</span> ? <span class="string">''</span> : <span class="string">'/'</span>) + picture.src : <span class="literal">null</span>,
+				woot = <span class="number">0</span>,
+				own = <span class="number">0</span>,
+				list = <span class="number">0</span>,
+				brand = data.brand || <span class="string">'Brand'</span>,
+				clarifyPopup = <span class="string">' data-overlay="clarify" data-overlay-params="noloading" href="product/clarify/id/'</span> + id + <span class="string">'"'</span>,
+				brandClass,
+				category = data.subcategory || <span class="string">'Subcategory'</span>,
+				categoryClass,
+				extended = <span class="literal">false</span>,
+				extendedList = <span class="string">''</span>,
+				sumActivity = data.activities || <span class="number">0</span>,
+				ret = <span class="literal">false</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-60">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-60">&#182;</a>
+              </div>
+              <p>There has to be a picture, no picture, no cookie</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (pictureSrc !== <span class="literal">null</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-61">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-61">&#182;</a>
+              </div>
+              <p>If there were any friend activity, extend card</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">if</span> (data.activity !== <span class="literal">undefined</span>) {
+					extended = <span class="literal">true</span>;
+					extendedList = generateFriendList(data.activity, voteAction, sumActivity, id);
+				}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-62">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-62">&#182;</a>
+              </div>
+              <p>Get votes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">if</span> (data.votes !== <span class="literal">undefined</span>) {
+					woot = data.votes.woot || <span class="number">0</span>;
+					own = data.votes.ownz || <span class="number">0</span>;
+					list = data.votes.list || <span class="number">0</span>;
+				}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-63">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-63">&#182;</a>
+              </div>
+              <p>Set clarify classes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				nameClass = data.name ? <span class="string">''</span> : <span class="string">' unknown'</span>;
+				brandClass = data.brand ? <span class="string">''</span> : <span class="string">' unknown'</span>;
+				categoryClass = data.subcategory ? <span class="string">''</span> : <span class="string">' unknown'</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-64">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-64">&#182;</a>
+              </div>
+              <p>Push images to lazy load if enabled and limit is leaded</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">if</span> (localIndex &gt; options.imageLoadLimit &amp;&amp; options.lazyLoadEnabled === <span class="literal">true</span>) {
+					vars.imageQueue.push({id: index});
+				}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-65">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-65">&#182;</a>
+              </div>
+              <p>Card template</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				card = <span class="string">'&lt;div class="card'</span> + (extended ? <span class="string">' extended'</span> : <span class="string">''</span>) + <span class="string">'" data-card-id="'</span> + index + <span class="string">'" data-id="'</span> + id + <span class="string">'"'</span> + (index === <span class="number">1</span> ? <span class="string">' data-guide-target="1"'</span> : <span class="string">''</span>) + <span class="string">'&gt;'</span> +
+					<span class="string">'&lt;a href="/product/'</span> + id + <span class="string">'" class="card-img" title="'</span> + name + <span class="string">'" alt="'</span> + name + <span class="string">'"&gt;'</span> +
+					<span class="string">'&lt;img '</span> + ((localIndex &lt;= options.imageLoadLimit || options.lazyLoadEnabled === <span class="literal">false</span>) ? <span class="string">''</span> : <span class="string">'data-'</span>) + <span class="string">'src="'</span> + pictureSrc + <span class="string">'" width="225"'</span> + (picture.width ? (<span class="string">' height="'</span> + Math.round((<span class="number">225</span> / picture.width) * picture.height) + <span class="string">'"'</span>) : <span class="string">' height="auto"'</span>) + <span class="string">' title="'</span> + name + <span class="string">'" /&gt;'</span> +
+					<span class="string">'&lt;/a&gt;'</span> +
+					<span class="string">'&lt;div class="button-group"&gt;'</span> +
+					<span class="string">'&lt;a href="/product/vote/id/'</span> + id + <span class="string">'/type/woot" data-wvote="woot" title="Woot this!" class="woot'</span> + (data.vote &amp; <span class="number">1</span> ? <span class="string">' set'</span> : <span class="string">''</span>) + <span class="string">'"&gt;&lt;span class="nr"&gt;'</span> + woot + <span class="string">'&lt;/span&gt;&lt;/a&gt;'</span> +
+					<span class="string">'&lt;a href="/product/vote/id/'</span> + id + <span class="string">'/type/ownz" data-wvote="own" title="I own this!"class="own'</span> + (data.vote &amp; <span class="number">4</span> ? <span class="string">' set'</span> : <span class="string">''</span>) + <span class="string">'"&gt;&lt;span class="nr"&gt;'</span> + own + <span class="string">'&lt;/span&gt;&lt;/a&gt;'</span> +
+					<span class="string">'&lt;a href="/product/vote/id/'</span> + id + <span class="string">'/type/list" data-wvote="list" title="Wish!" class="list'</span> + (data.vote &amp; <span class="number">2</span> ? <span class="string">' set'</span> : <span class="string">''</span>) + <span class="string">'"&gt;&lt;span class="nr"&gt;'</span> + list + <span class="string">'&lt;/span&gt;&lt;/a&gt;'</span> +
+					<span class="string">'&lt;/div&gt;'</span> +
+					<span class="string">'&lt;div class="card-info"&gt;'</span> +
+					<span class="string">'&lt;a class="card-brand'</span> + brandClass + <span class="string">'" data-clarify="brand"'</span> + (data.brand ? <span class="string">''</span> : clarifyPopup) + (data.brand ? <span class="string">' href="/brand/'</span> + data.brand + <span class="string">'"'</span> : <span class="string">''</span>) + <span class="string">'&gt;'</span> + (data.brand || <span class="string">'Brand'</span>) + <span class="string">'&lt;/a&gt;'</span> +
+					<span class="string">'&lt;a class="card-product'</span> + nameClass + <span class="string">'" data-clarify="name"'</span> + (data.name ? <span class="string">''</span> : clarifyPopup) + <span class="string">'&gt;'</span> + name + <span class="string">'&lt;/a&gt;'</span> +
+					<span class="string">'&lt;a class="card-category'</span> + categoryClass + <span class="string">'" data-clarify="subcategory"'</span> + (data.category ? <span class="string">' data-category="'</span> + data.category + <span class="string">'"'</span> : <span class="string">''</span>) + (data.subcategory ? <span class="string">' data-subcategory="'</span> + data.subcategory + <span class="string">'"'</span> : clarifyPopup) + <span class="string">'&gt;'</span> + category + <span class="string">'&lt;/a&gt;'</span> +
+					<span class="string">'&lt;/div&gt;'</span> + extendedList +
+					<span class="string">'&lt;/div&gt;'</span>;
+
+				ret = $(card);
+
+			}
+
+			<span class="keyword">return</span> ret;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-66">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-66">&#182;</a>
+              </div>
+              <p>Generate friend list template (card part)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		generateFriendList = <span class="function"><span class="keyword">function</span> <span class="params">(activity, voteAction, sum, id)</span> {</span>
+			<span class="keyword">var</span> html = <span class="string">'&lt;div class="card-friend-list"&gt;&lt;ul&gt;'</span>,
+				type = <span class="string">'vote-woot'</span>,
+				isGuest = <span class="literal">false</span>,
+				item,
+				i = <span class="number">0</span>,
+				diff = <span class="number">0</span>,
+				l = activity.length;
+
+			<span class="keyword">if</span> (l &gt; <span class="number">3</span>) {
+				diff = sum - l;
+				l = <span class="number">3</span>;
+			}
+
+			<span class="keyword">for</span> (i; i &lt; l; i++) {
+				item = activity[i];
+				<span class="keyword">if</span> (voteAction === <span class="string">'all'</span> || voteAction === <span class="literal">undefined</span>) {
+					<span class="keyword">if</span> (item.vote &amp; <span class="number">4</span>) {
+						type = <span class="string">'vote-own'</span>;
+					} <span class="keyword">else</span> <span class="keyword">if</span> (item.vote &amp; <span class="number">2</span>) {
+						type = <span class="string">'vote-wish'</span>;
+					} <span class="keyword">else</span> <span class="keyword">if</span> (item.vote &amp; <span class="number">1</span>) {
+						type = <span class="string">'vote-woot'</span>;
+					}
+				} <span class="keyword">else</span> <span class="keyword">if</span> (voteAction === <span class="string">'own'</span>) {
+					type = <span class="string">'vote-own'</span>;
+				} <span class="keyword">else</span> <span class="keyword">if</span> (voteAction === <span class="string">'woot'</span>) {
+					type = <span class="string">'vote-woot'</span>;
+				} <span class="keyword">else</span> <span class="keyword">if</span> (voteAction === <span class="string">'wish'</span>) {
+					type = <span class="string">'vote-wish'</span>;
+				}
+
+				isGuest = (!!(item.nickname === <span class="literal">null</span> || item.nickname === <span class="literal">undefined</span>));
+				html += <span class="string">'&lt;li class="'</span> + type + <span class="string">'"&gt;'</span> +
+					<span class="string">'&lt;a href="/'</span> + (isGuest ? item.id : item.nickname) + <span class="string">'" class="avatar"&gt;&lt;img width="36" height="36" src="'</span> + item.picture.src + <span class="string">'" title="'</span> + (isGuest ? item.id : item.nickname) + <span class="string">'" alt="'</span> + (isGuest ? item.id : item.nickname) + <span class="string">'" /&gt;&lt;/a&gt;'</span> +
+					<span class="string">'&lt;a href="/'</span> + (isGuest ? item.id : item.nickname) + <span class="string">'" class="name"&gt;'</span> +
+					<span class="string">'&lt;h4&gt;'</span> + (isGuest ? <span class="string">'Guest'</span> : item.nickname) + <span class="string">'&lt;/h4&gt;'</span> +
+					<span class="string">'&lt;h6&gt;'</span> + (isGuest ? <span class="string">''</span> : item.city) + <span class="string">'&lt;/h6&gt;'</span> +
+					<span class="string">'&lt;/a&gt;'</span> +
+					<span class="string">'&lt;span class="use-mini-sprite vote"&gt;&lt;/span&gt;'</span> +
+					<span class="string">'&lt;/li&gt;'</span>;
+			}
+
+			<span class="keyword">if</span> (diff &gt; <span class="number">0</span>) {
+				html += <span class="string">'&lt;li class="sum"&gt;&lt;a href="/product/'</span> + id + <span class="string">'"&gt;...and '</span> + diff + <span class="string">' more friend'</span> + (diff &gt; <span class="number">1</span> ? <span class="string">'s'</span> : <span class="string">''</span>) + <span class="string">'&lt;/a&gt;&lt;/li&gt;'</span>;
+			}
+
+			html += <span class="string">'&lt;/ul&gt;&lt;/div&gt;'</span>;
+			<span class="keyword">return</span> html;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-67">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-67">&#182;</a>
+              </div>
+              <p>Add card to list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		addCardToList = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, data, position, replace)</span> {</span>
+			<span class="keyword">var</span> $card,
+				i = <span class="number">0</span>,
+				l = vars.cards.length,
+				temp,
+				tempCard,
+				ret = <span class="literal">true</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-68">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-68">&#182;</a>
+              </div>
+              <p>Generate card from data</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$card = generateCard(vars, options, data, <span class="number">1</span>, <span class="number">0</span>);
+
+			<span class="keyword">if</span> (replace !== <span class="literal">true</span>) {
+
+				<span class="keyword">if</span> (position === <span class="literal">undefined</span> || position === <span class="string">'before'</span>) {
+
+					<span class="keyword">for</span> (i; i &lt; l; i++) {
+						tempCard = vars.cards[i];
+						temp = parseInt(tempCard.attr(<span class="string">'data-card-id'</span>), <span class="number">10</span>);
+						tempCard.attr(<span class="string">'data-card-id'</span>, temp++);
+						vars.cards[i] = tempCard;
+					}
+				}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-69">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-69">&#182;</a>
+              </div>
+              <p>Add to list and re-init layout</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				vars.cards.push($card);
+				refreshLayout(vars, options, <span class="literal">true</span>);
+			} <span class="keyword">else</span> {
+				ret = $card;
+			}
+			<span class="keyword">return</span> ret;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-70">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-70">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-71">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-71">&#182;</a>
+              </div>
+              <p>Init plugin</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wList'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wList'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wListVars'</span>, vars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						<span class="keyword">if</span> (options.standAlone === <span class="literal">false</span>) {
+							initColumns(vars, options);
+							initBindings(vars, options);
+						}
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-72">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-72">&#182;</a>
+              </div>
+              <p>Build list from data<br><em>data:</em> card data, <code>Object</code><br><em>reset:</em> reset list, <code>Boolean</code><br>*voteAction: vote type on the card, <code>String</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			build: <span class="function"><span class="keyword">function</span> <span class="params">(data, reset, voteAction)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wList'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wListVars'</span>);
+					buildList(vars, options, data, reset, voteAction);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-73">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-73">&#182;</a>
+              </div>
+              <p>Add card to list<br><em>data:</em> card data, <code>Object</code><br><em>position:</em> position to insert to, <code>Number</code><br><em>replace:</em> replace existing card, <code>Boolean</code> </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			addCard: <span class="function"><span class="keyword">function</span> <span class="params">(data, position, replace)</span> {</span>
+				<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wList'</span>),
+					vars = $(<span class="keyword">this</span>).data(<span class="string">'wListVars'</span>);
+				<span class="keyword">return</span> addCardToList(vars, options, data, position, replace);
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-74">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-74">&#182;</a>
+              </div>
+              <p>Show loading animation </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loading: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wListVars'</span>);
+					vars.$wrapper.addClass(<span class="string">'loading'</span>);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-75">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-75">&#182;</a>
+              </div>
+              <p>Set loaded state (remove loading animation)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loaded: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wListVars'</span>);
+					vars.$wrapper.removeClass(<span class="string">'loading'</span>);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-76">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-76">&#182;</a>
+              </div>
+              <p>Trigger category click callback </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			categoryClick: <span class="keyword">function</span>($elem) {
+				<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wList'</span>);
+				categoryAction(options, $elem);
+			}
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-77">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-77">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wList</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wList: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wList'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

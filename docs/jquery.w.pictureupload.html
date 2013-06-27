@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.pictureupload.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.pictureupload.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy picture upload plugin</strong>.</p>
+<p><a href="jquery.w.pager.html">Previous Plugin</a> | <a href="jquery.w.popup.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 15:14:50 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wPictureUpload(
+     action: &#39;user/picture&#39;,
+     dragndropSupport: true,
+     preview: true,
+     successCallback: pictureUploadSuccess
+ );</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Picture upload plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Action URL to post to</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			action: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Drag and drop enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			dragndropSupport: <span class="literal">true</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Upload error callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			errorCallback: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Error class</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			errorClass: <span class="string">'error'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Loading class</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loadingClass: <span class="string">'loading'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Show or not show progress</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			noProgress: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Preview enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			preview: <span class="literal">true</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Label for upload ready</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			readyLabel: <span class="string">'Change profile image'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Starting label</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			startLabel: <span class="string">''</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Upload success callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			successCallback: <span class="literal">null</span>
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Selected files</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			files: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Hidden input</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$fileHidden: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>File input jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$fileInput: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Label wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$label: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Target area wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$targetArea: <span class="literal">null</span>,
+			$wrapper: <span class="literal">null</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Init (cache) the used DOM elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initDOMElements = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			vars.$wrapper.find(<span class="string">'.target-area'</span>).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> vars.$targetArea = $(<span class="keyword">this</span>); });
+			vars.$wrapper.find(<span class="string">'input[type=file]'</span>).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> vars.$fileInput = $(<span class="keyword">this</span>); });
+			vars.$wrapper.find(<span class="string">'input[type=hidden]'</span>).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> vars.$fileHidden = $(<span class="keyword">this</span>); });
+			vars.$targetArea.find(<span class="string">'label'</span>).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> vars.$label = $(<span class="keyword">this</span>); });
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> offsetX, offsetY, x, y;
+			vars.$targetArea.on({
+				<span class="string">'mousemove.pictureupload touchstart.pictureupload'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.stopPropagation();
+					offsetX = $(<span class="keyword">this</span>).offset().left;
+					offsetY = $(<span class="keyword">this</span>).offset().top;
+					x = (e.type === <span class="string">'mousemove'</span> ? e.originalEvent.pageX : e.originalEvent.targetTouches[<span class="number">0</span>].pageX) - offsetX;
+					y = (e.type === <span class="string">'mousemove'</span> ? e.originalEvent.pageY : e.originalEvent.targetTouches[<span class="number">0</span>].pageY) - offsetY;
+					vars.$fileInput.css({top: y, left: x});
+				}
+			});
+			vars.$fileInput.on({
+				<span class="string">'change.pictureupload'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					uploadPicture(vars, options, e.currentTarget.files);
+				}
+			});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>If drag and drop enabled, then add bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (options.dragndropSupport === <span class="literal">true</span>) {
+				vars.$targetArea.on({
+					<span class="string">'dragover.pictureupload'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+						e.stopPropagation();
+						e.preventDefault();
+					},
+					<span class="string">'drop.pictureupload'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+						e.stopPropagation();
+						e.preventDefault();
+						getDragFiles(e.originalEvent, vars, options);
+					},
+					<span class="string">'dragend.pictureupload'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+						e.stopPropagation();
+					}
+				});
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Get file list from drag and drop </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		getDragFiles = <span class="function"><span class="keyword">function</span> <span class="params">(event, vars, options)</span> {</span>
+			<span class="keyword">var</span> files = event.dataTransfer.files,
+				i = <span class="number">0</span>,
+				l = files.length,
+				match,
+				output = [];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Check only for image files (MIME type)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">for</span> (i; i &lt; l; i++) {
+				match = files[i].type.match(<span class="regexp">/image\/*/</span>);
+				<span class="keyword">if</span> (match.length &gt; <span class="number">0</span>) {
+					output.push(files[i]);
+				}
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>If there is something to upload</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (output.length &gt; <span class="number">0</span>) {
+				uploadPicture(vars, options, output);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Upload picture</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		uploadPicture = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, files)</span> {</span>
+			<span class="keyword">var</span> xhr, loaded, total,
+				formData = <span class="keyword">new</span> FormData();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Create <code>formData</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			formData.append(vars.$fileInput.attr(<span class="string">'name'</span>), files[<span class="number">0</span>]);
+			vars.$fileInput.html(vars.$fileInput.html());
+			vars.$fileInput.val(<span class="string">''</span>);
+
+			vars.$wrapper.addClass(options.loadingClass);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Get XHR object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			xhr = $.ajaxSettings.xhr();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Listen for progress</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (options.noProgress === <span class="literal">false</span>) {
+				<span class="keyword">if</span> (xhr.upload) {
+					$(xhr.upload).on({
+						<span class="string">'progress.pictureupload'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+							total = e.originalEvent.total;
+							loaded = e.originalEvent.total;
+							<span class="keyword">if</span> (vars.$label.data(<span class="string">'original'</span>) === <span class="literal">undefined</span>) {
+								vars.$label.data({original: vars.$label.text()});
+							}
+							vars.$label.text(Math.round((loaded / total) * <span class="number">100</span>) + <span class="string">' %'</span>);
+						}
+					});
+				}
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Post <code>formData</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$.ajax({
+				type: <span class="string">'POST'</span>,
+				url: options.action,
+				xhr: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> <span class="keyword">return</span> xhr; },
+				dataType: <span class="string">'json'</span>,
+				processData: <span class="literal">false</span>,
+				contentType: <span class="literal">false</span>,
+				data: formData,
+				success: <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> {</span>
+					uploadReady(vars, options, data);
+				},
+				error: <span class="function"><span class="keyword">function</span> <span class="params">(xhr)</span> {</span>
+					console.log(<span class="string">'error: '</span> + xhr);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Upload is ready</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		uploadReady = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, data)</span> {</span>
+			<span class="keyword">var</span> img = <span class="keyword">new</span> Image(), $img;
+
+			<span class="keyword">if</span> (data.success === <span class="literal">true</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Get thumbnail picture with the help of <code>wThumbnail</code> plugin</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				data = $.wThumbnail(data.data, <span class="string">'normal'</span>);
+				<span class="keyword">if</span> (options.preview === <span class="literal">true</span>) {
+					img.onload = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						<span class="keyword">if</span> (vars.$targetArea.find(<span class="string">'img.uploaded-picture'</span>).length &lt; <span class="number">1</span>) {
+							$img = $(<span class="string">'&lt;img class="uploaded-picture" src="'</span> + data.src + <span class="string">'" /&gt;'</span>).css({opacity: <span class="number">0</span>});
+							vars.$targetArea.append($img);
+						} <span class="keyword">else</span> {
+							$img = vars.$targetArea.find(<span class="string">'img.uploaded-picture'</span>);
+							$img.attr(<span class="string">'src'</span>, data.src).css({opacity: <span class="number">0</span>});
+						}
+						$img.stop().animate({
+							opacity: <span class="number">1</span>
+						}, <span class="number">500</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+							setReadyState(vars, options, data);
+						});
+					};
+					img.src = data.src;
+				} <span class="keyword">else</span> {
+					setReadyState(vars, options, data);
+				}
+			} <span class="keyword">else</span> {
+				setErrorState(vars, options, data);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Set ready class and state</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setReadyState = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, data)</span> {</span>
+			vars.$wrapper.removeClass(options.loadingClass + <span class="string">' '</span> + options.errorClass);
+			vars.$label.removeClass(<span class="string">'empty'</span>).text(options.readyLabel).show();
+			<span class="keyword">if</span> (data !== <span class="literal">undefined</span>) {
+				<span class="keyword">if</span> (options.successCallback !== <span class="literal">null</span>) {
+					options.successCallback.call(vars.$wrapper, [vars.$wrapper, data]);
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Set error class and state</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setErrorState = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, data)</span> {</span>
+			vars.$wrapper.removeClass(options.loadingClass).addClass(options.errorClass);
+			<span class="keyword">if</span> (options.errorCallback !== <span class="literal">null</span>) {
+				options.errorCallback.call(vars.$wrapper, [vars.$wrapper, data]);
+			}
+			<span class="keyword">if</span> (vars.$label.length &gt; <span class="number">0</span> &amp;&amp; options.noProgress === <span class="literal">false</span>) {
+				vars.$label.hide();
+				vars.$targetArea.find(<span class="string">'img.uploaded-picture'</span>).remove();
+				vars.$wrapper.removeClass(<span class="string">'upload-progress'</span>);
+				vars.$label.addClass(<span class="string">'empty'</span>).text(vars.$label.data(<span class="string">'original'</span>)).show();
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Add image</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		addImage = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, imgsrc)</span> {</span>
+			<span class="keyword">var</span> img = <span class="keyword">new</span> Image(), $img, data;
+
+			data = $.wThumbnail(imgsrc, <span class="string">'normal'</span>);
+
+			img.onload = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+
+				<span class="keyword">if</span> (vars.$targetArea.find(<span class="string">'img.uploaded-picture'</span>).length &lt; <span class="number">1</span>) {
+					$img = $(<span class="string">'&lt;img class="uploaded-picture" src="'</span> + data.src + <span class="string">'" /&gt;'</span>).css({opacity: <span class="number">0</span>});
+					vars.$targetArea.append($img);
+				} <span class="keyword">else</span> {
+					$img = vars.$targetArea.find(<span class="string">'img.uploaded-picture'</span>);
+					$img.attr(<span class="string">'src'</span>, data.src).css({opacity: <span class="number">0</span>});
+				}
+				$img.stop().animate({
+					opacity: <span class="number">1</span>
+				}, <span class="number">500</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					setReadyState(vars, options);
+				});
+
+			};
+
+			img.src = data.src;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {
+
+			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wPictureUpload'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						$(<span class="keyword">this</span>).data(<span class="string">'wPictureUpload'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wPictureUploadVars'</span>, vars);
+						<span class="keyword">if</span> (options.action === <span class="literal">null</span>) {
+							options.action = vars.$wrapper.attr(<span class="string">'data-picture-upload-action'</span>);
+						}
+						options.dragndropSupport = Modernizr.draganddrop;
+						initDOMElements(vars);
+						initBindings(vars, options);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Add image<br><em>imgsrc:</em> image path, <code>String</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			addImage: <span class="function"><span class="keyword">function</span> <span class="params">(imgsrc)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wPictureUpload'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wPictureUploadVars'</span>);
+					vars.$wrapper.addClass(options.loadingClass);
+					addImage(vars, options, imgsrc);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Reset plugin</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			reset: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wPictureUpload'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wPictureUploadVars'</span>);
+					vars.files = <span class="literal">null</span>;
+					vars.$wrapper.removeClass(<span class="string">'upload-progress '</span> + options.loadingClass + <span class="string">' '</span> + options.errorClass);
+					vars.$targetArea.find(<span class="string">'img.uploaded-picture'</span>).remove();
+					vars.$label.removeClass().addClass(<span class="string">'empty'</span>).html(options.startLabel);
+					vars.$label.removeData(<span class="string">'original'</span>);
+				});
+			}
+
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Extend jQuery with wPictureUpload</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wPictureUpload: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wPictureUpload'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

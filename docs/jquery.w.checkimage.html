@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.checkimage.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.checkimage.html">
+                jquery.w.checkimage.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.checkimage.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="comment">/*
+ * jQuery wCheckImage
+ *
+ * Simplified BSD License (@see License)
+ * @author Peter Schmiz
+ * @copyright (c) 2013 Peter Schmiz
+ * Usage Command Line: $.wCheckImage(url, success, failure)
+ * @version 1.0
+ * @requires jQuery
+ */</span>
+
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+	$.wCheckImage = <span class="function"><span class="keyword">function</span> <span class="params">(url, success, failure)</span> {</span>
+		<span class="keyword">var</span> img = <span class="keyword">new</span> Image(),
+			loaded = <span class="literal">false</span>,
+			errored = <span class="literal">false</span>,
+			errors = {};
+
+		img.onload = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+			<span class="keyword">if</span> (loaded) { <span class="keyword">return</span>; }
+			loaded = <span class="literal">true</span>;
+
+			<span class="keyword">if</span> (success &amp;&amp; success.call) {
+				success.call(img);
+			}
+		};
+
+		img.onerror = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+			<span class="keyword">if</span> (errored) { <span class="keyword">return</span>; }
+			errors[url] = errored = <span class="literal">true</span>;
+
+			<span class="keyword">if</span> (failure &amp;&amp; failure.call) {
+				failure.call(img);
+			}
+		};
+
+		<span class="keyword">if</span> (errors[url]) {
+			failure.call(img);
+			<span class="keyword">return</span>;
+		}
+
+		img.src = url;
+
+		<span class="keyword">if</span> (img.complete) {
+			success.call(img);
+		}
+	};
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
