@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.popup.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.popup.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy popup plugin</strong>.</p>
+<p><a href="jquery.w.pictureupload.html">Previous Plugin</a> | <a href="jquery.w.score.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 15:22:10 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wPopup({
+     callback: popupCallback
+ });</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Popup plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Callback function</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			callback: <span class="literal">null</span>
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Popup window reference (got from window.open)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			currentWindow: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Callback target jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$callbackTarget: <span class="literal">null</span>,
+			$wrapper: <span class="literal">null</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.$wrapper.on({
+				<span class="string">'click.wpopup'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.preventDefault();
+					vars.$callbackTarget = vars.$wrapper.find($(<span class="keyword">this</span>).attr(<span class="string">'data-popup-target'</span>));
+					loadPopup(vars, options, $(<span class="keyword">this</span>).attr(<span class="string">'href'</span>), $(<span class="keyword">this</span>).attr(<span class="string">'data-popup'</span>));
+				}
+			}, <span class="string">'[data-popup]:not([data-popup-disabled])'</span>);
+			window.callback = <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> {</span>
+				processCallback(vars, options, <span class="keyword">this</span>, data);
+			};
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Load and open popup</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		loadPopup = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, href, dimensions)</span> {</span>
+			<span class="keyword">var</span> sizes = dimensions.split(<span class="string">','</span>),
+				w = <span class="number">640</span>,
+				h = <span class="number">320</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Set popup dimensions</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (sizes[<span class="number">0</span>].search(<span class="string">'width'</span>) !== -<span class="number">1</span>) {
+				w = parseInt(sizes[<span class="number">0</span>].replace(<span class="string">'width='</span>, <span class="string">''</span>), <span class="number">10</span>);
+				h = parseInt(sizes[<span class="number">1</span>].replace(<span class="string">'height='</span>, <span class="string">''</span>), <span class="number">10</span>);
+			} <span class="keyword">else</span> {
+				w = parseInt(sizes[<span class="number">1</span>].replace(<span class="string">'width='</span>, <span class="string">''</span>), <span class="number">10</span>);
+				h = parseInt(sizes[<span class="number">0</span>].replace(<span class="string">'height='</span>, <span class="string">''</span>), <span class="number">10</span>);
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Open a new window</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.currentWindow = window.open(href, <span class="string">'wpopup'</span>, dimensions + <span class="string">',top='</span> + parseInt(($(window).height() - h) / <span class="number">2</span>, <span class="number">10</span>) + <span class="string">',left='</span> + parseInt(($(window).width() - w) / <span class="number">2</span>, <span class="number">10</span>) + <span class="string">',dependent=yes,menubar=no,toolbar=no,location=no,resizable=yes,scrollbars=yes'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Call popup callback, return popup data</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		processCallback = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, popup, data)</span> {</span>
+			<span class="keyword">if</span> (options.callback !== <span class="literal">null</span>) {
+				options.callback.call(<span class="keyword">this</span>, popup, data, vars.$callbackTarget);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {
+			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wPopup'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wPopup'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wPopupVars'</span>, vars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						initBindings(vars, options);
+					}
+				});
+			}
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wPopup</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wPopup: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wPopup'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.validator.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.validator.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy form validator plugin</strong>.</p>
+<p><a href="jquery.w.userinfo.html">Previous Plugin</a> | <a href="jquery.w.vote.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 16:39:10 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(&#39;body form&#39;).wValidator({
+     callback: submitForm
+ });</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Form validator plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Submit callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			callback: <span class="function"><span class="keyword">function</span> <span class="params">(result)</span> {</span> },</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>jQuery selector for elements need to be validated</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			elementSelector: <span class="string">'[data-validate]'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Error CSS class</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			errorClass: <span class="string">'error'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>jQuery selector for item selection</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			itemSelector: <span class="string">'[data-validate-rules]'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Error messages</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			messages: {
+				required: <span class="string">'This field is required.'</span>,
+				email: <span class="string">'Please enter a valid email address.'</span>,
+				url: <span class="string">'Please enter a valid URL.'</span>,
+				date: <span class="string">'Please enter a valid date.'</span>,
+				number: <span class="string">'Please enter a valid number.'</span>,
+				digits: <span class="string">'Please enter only digits.'</span>,
+				equalTo: <span class="string">'Please enter the same value again.'</span>,
+				maxlength: <span class="string">'Please enter no more than {0} characters.'</span>,
+				minlength: <span class="string">'Please enter at least {0} characters.'</span>,
+				rangelength: <span class="string">'Please enter a value between {0} and {1} characters long.'</span>,
+				range: <span class="string">'Please enter a value between {0} and {1}.'</span>,
+				max: <span class="string">'Please enter a value less than or equal to {0}.'</span>,
+				min: <span class="string">'Please enter a value greater than or equal to {0}.'</span>
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Validation rule attributes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			rulesAttribute: <span class="string">'data-validate-rules'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>jQuery selector for submit element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			submitSelector: <span class="string">'button[type=submit]'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Valid CSS class</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			validClass: <span class="string">'valid'</span>
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Form was submited already</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			submited: <span class="literal">false</span>,
+			$wrapper: <span class="literal">null</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> $form, result;
+			vars.$wrapper.find(options.submitSelector).on({
+				<span class="string">'click.form'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.preventDefault();
+					$form = $(e.currentTarget).parents(<span class="string">'form'</span>).first();
+					vars.submited = <span class="literal">true</span>;
+					result = validateForm($form, vars, options);
+					options.callback.call(<span class="keyword">this</span>, $form, result);
+				}
+			});
+			vars.$wrapper.on({
+				<span class="string">'click.form keyup.form'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					<span class="keyword">if</span> (vars.submited === <span class="literal">true</span>) {
+						result = validateGroup($(e.target), $(<span class="keyword">this</span>), vars, options);
+					}
+				}
+			}, options.elementSelector);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Validate form<br><em>$form:</em> form to validate, <code>jQuery object</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		validateForm = <span class="function"><span class="keyword">function</span> <span class="params">($form, vars, options)</span> {</span>
+			<span class="keyword">var</span> errors = [],
+				valid = <span class="literal">true</span>,
+				$parent = <span class="literal">null</span>,
+				okays = [],
+				result = <span class="literal">null</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>First reset the form</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			resetForm($form, vars, options);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Find every element for validation</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$form.find(options.elementSelector).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				$parent = $(<span class="keyword">this</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Get errors and okays</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				result = collectErrorsOkays(vars, options, $parent, errors, okays, valid);
+				errors = result.errors;
+				okays = result.okays;
+				valid = result.valid;
+			});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Set CSS classes, messages, labels</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			decorateForm(vars, options, errors, okays);
+
+			<span class="keyword">return</span> {valid: valid, errors: errors, okays: okays, url: $form.attr(<span class="string">'action'</span>)};
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Validate input groups</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		validateGroup = <span class="function"><span class="keyword">function</span> <span class="params">($elem, $group, vars, options)</span> {</span>
+			<span class="keyword">var</span> errors = [],
+				okays = [],
+				result;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Reset group</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			resetElement($group, vars, options, <span class="literal">false</span>, $elem);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Get errors and okays</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			result = collectErrorsOkays(vars, options, $group, errors, okays);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Decorate form</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			decorateForm(vars, options, result.errors, result.okays);
+
+			<span class="keyword">return</span> {valid: result.valid};
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Validate single element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		validateElement = <span class="function"><span class="keyword">function</span> <span class="params">($element, vars, options)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Get rules</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">var</span> rules = $element.attr(options.rulesAttribute).split(<span class="string">'|'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Check rules</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">return</span> checkRules($element, rules, vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Check errors and valid elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		collectErrorsOkays = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, $element, errors, okays, valid)</span> {</span>
+			<span class="keyword">var</span> result;
+
+			$element.find(options.itemSelector).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Validate single element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				result = validateElement($(<span class="keyword">this</span>), vars, options);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>If it&#39;s not valid</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">if</span> (result.valid === <span class="literal">false</span>) {
+					valid = <span class="literal">false</span>;
+					errors.push({
+						messages: result.errors,
+						element: $(<span class="keyword">this</span>),
+						group: $element
+					});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>If it is valid</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				} <span class="keyword">else</span> {
+					okays.push({
+						element: $(<span class="keyword">this</span>),
+						group: $element
+					});
+				}
+			});
+
+			<span class="keyword">return</span> {errors: errors, okays: okays, valid: valid};
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Set CSS classes, error messages, labels</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		decorateForm = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, errors, okays)</span> {</span>
+			<span class="keyword">var</span> $label = <span class="literal">null</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Set error messages, error CSS classes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$.each(errors, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				v.group.addClass(options.errorClass).removeClass(options.validClass);
+				v.element.addClass(options.errorClass).removeClass(options.validClass);
+				$label = v.element.siblings(<span class="string">'label[for='</span> + v.element.attr(<span class="string">'id'</span>) + <span class="string">']'</span>);
+				<span class="keyword">if</span> ($label.length &lt; <span class="number">1</span>) {
+					$label = v.element.parents(<span class="string">'.input-grp, [data-validate-ext]'</span>).find(<span class="string">'label[for='</span> + v.element.attr(<span class="string">'data-validate-label'</span>) + <span class="string">']'</span>);
+				}
+				$label.data({originalText: $label.text()}).text(v.messages[<span class="number">0</span>]).attr(<span class="string">'title'</span>, v.messages[<span class="number">0</span>]);
+			});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Set valid CSS classes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$.each(okays, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				<span class="keyword">if</span> (v.group.find(<span class="string">'.error'</span> + options.itemSelector).length &lt; <span class="number">1</span>) {
+					v.group.addClass(options.validClass).removeClass(options.errorClass);
+				}
+				v.element.addClass(options.validClass).removeClass(options.errorClass);
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Check validation rule for an element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		checkRules = <span class="function"><span class="keyword">function</span> <span class="params">($elem, rules, vars, options)</span> {</span>
+			<span class="keyword">var</span> i = <span class="number">0</span>,
+				rule = <span class="literal">null</span>,
+				l = rules.length,
+				errors = [],
+				valid = <span class="literal">true</span>,
+				result = <span class="literal">null</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Check every rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">for</span> (i; i &lt; l; i++) {
+				rule = rules[i].split(<span class="string">':'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Check single rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				result = applyRule(vars, options, rule, $elem);
+				<span class="keyword">if</span> (result.valid === <span class="literal">false</span>) {
+					valid = <span class="literal">false</span>;
+					errors.push(result.error);
+				}
+			}
+
+			<span class="keyword">return</span> {valid: valid, errors: errors};
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Apply rule to an element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		applyRule = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, rule, $elem)</span> {</span>
+			<span class="keyword">var</span> valid = <span class="literal">true</span>,
+				error = <span class="string">''</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Element type</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				type = $elem.attr(<span class="string">'type'</span>),</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Element value</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				val = elementValue($elem[<span class="number">0</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>Switch between rules</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">switch</span> (rule[<span class="number">0</span>]) {
+				<span class="keyword">case</span> <span class="string">'required'</span>:
+					<span class="keyword">if</span> (!required(val, $elem[<span class="number">0</span>])) {
+						valid = <span class="literal">false</span>;
+						error = options.messages.required;
+					}
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="string">'minlength'</span>:
+					<span class="keyword">if</span> (!minlength(val, $elem[<span class="number">0</span>], rule[<span class="number">1</span>])) {
+						valid = <span class="literal">false</span>;
+						error = options.messages.minlength.replace(<span class="string">'{0}'</span>, rule[<span class="number">1</span>]);
+					}
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="string">'maxlength'</span>:
+					<span class="keyword">if</span> (!maxlength(val, $elem[<span class="number">0</span>], rule[<span class="number">1</span>])) {
+						valid = <span class="literal">false</span>;
+						error = options.messages.maxlength.replace(<span class="string">'{0}'</span>, rule[<span class="number">1</span>]);
+					}
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="string">'email'</span>:
+					<span class="keyword">if</span> (!email(val, $elem[<span class="number">0</span>])) {
+						valid = <span class="literal">false</span>;
+						error = options.messages.email;
+					}
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="string">'number'</span>:
+					<span class="keyword">if</span> (!number(val, $elem[<span class="number">0</span>])) {
+						valid = <span class="literal">false</span>;
+						error = options.messages.number;
+					}
+					<span class="keyword">break</span>;
+				<span class="keyword">default</span>:
+					<span class="keyword">break</span>;
+			}
+			<span class="keyword">return</span> {valid: valid, error: error};
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>Check required rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		required = <span class="function"><span class="keyword">function</span> <span class="params">(value, element)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <p>It&#39;s a <code>&lt;select&gt;</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (element.nodeName.toLowerCase() === <span class="string">'select'</span>) {
+				<span class="keyword">var</span> val = $(element).val();
+				<span class="keyword">return</span> val &amp;&amp; val.length &gt; <span class="number">0</span>;
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <p>It&#39;s a <code>&lt;input type=&quot;checkbox&quot;&gt;</code> or <code>&lt;input type=&quot;radio&quot; /&gt;</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (checkable(element)) {
+				<span class="keyword">return</span> getLength(value, element) &gt; <span class="number">0</span>;
+			}
+			<span class="keyword">return</span> $.trim(value).length &gt; <span class="number">0</span>;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-44">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-44">&#182;</a>
+              </div>
+              <p>Check email format rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		email = <span class="function"><span class="keyword">function</span> <span class="params">(value, element)</span> {</span>
+			<span class="keyword">return</span> optional(element) || <span class="regexp">/^((([a-z]|\d|[!#\$%&amp;'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&amp;'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i</span>.test(value);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-45">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-45">&#182;</a>
+              </div>
+              <p>Check number format rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		number = <span class="function"><span class="keyword">function</span> <span class="params">(value, element)</span> {</span>
+			<span class="keyword">return</span> optional(element) || <span class="regexp">/^\d{1,9}(|\.\d{1,2})$/</span>.test(value);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-46">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-46">&#182;</a>
+              </div>
+              <p>Check minimal length rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		minlength = <span class="function"><span class="keyword">function</span> <span class="params">(value, element, param)</span> {</span>
+			<span class="keyword">var</span> length = $.isArray(value) ? value.length : getLength($.trim(value), element);
+			<span class="keyword">return</span> optional(element) || length &gt;= param;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-47">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-47">&#182;</a>
+              </div>
+              <p>Check maximum length rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		maxlength = <span class="function"><span class="keyword">function</span> <span class="params">(value, element, param)</span> {</span>
+			<span class="keyword">var</span> length = $.isArray(value) ? value.length : getLength($.trim(value), element);
+			<span class="keyword">return</span> optional(element) || length &lt;= param;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-48">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-48">&#182;</a>
+              </div>
+              <p>Check if input is checkable (checkbox or radio)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		checkable = <span class="function"><span class="keyword">function</span> <span class="params">(element)</span> {</span>
+			<span class="keyword">return</span> (<span class="regexp">/radio|checkbox/i</span>).test(element.type);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-49">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-49">&#182;</a>
+              </div>
+              <p>Optional rule</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		optional = <span class="function"><span class="keyword">function</span> <span class="params">(element)</span> {</span>
+			<span class="keyword">var</span> val = elementValue(element);
+			<span class="keyword">return</span> !required.call(<span class="keyword">this</span>, val, element);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-50">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-50">&#182;</a>
+              </div>
+              <p>Get checkable length</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		getLength = <span class="function"><span class="keyword">function</span> <span class="params">(value, element)</span> {</span>
+			<span class="keyword">switch</span> (element.nodeName.toLowerCase()) {
+				<span class="keyword">case</span> <span class="string">'select'</span>:
+					<span class="keyword">return</span> $(<span class="string">'option:selected'</span>, element).length;
+			}
+			<span class="keyword">return</span> value.length;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-51">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-51">&#182;</a>
+              </div>
+              <p>Get elements value</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		elementValue = <span class="function"><span class="keyword">function</span> <span class="params">(element)</span> {</span>
+			<span class="keyword">var</span> type = $(element).attr(<span class="string">"type"</span>),
+				val = $(element).val();
+
+			<span class="keyword">if</span> (type === <span class="string">"radio"</span> || type === <span class="string">"checkbox"</span>) {
+				<span class="keyword">return</span> $(<span class="string">"input[name='"</span> + $(element).attr(<span class="string">"name"</span>) + <span class="string">"']:checked"</span>).val();
+			}
+
+			<span class="keyword">if</span> (<span class="keyword">typeof</span> val === <span class="string">"string"</span>) {
+				<span class="keyword">return</span> val.replace(<span class="regexp">/\r/g</span>, <span class="string">""</span>);
+			}
+			<span class="keyword">return</span> val;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-52">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-52">&#182;</a>
+              </div>
+              <p>Reset form</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		resetForm = <span class="function"><span class="keyword">function</span> <span class="params">($form, vars, options, onlyError)</span> {</span>
+			<span class="keyword">var</span> $group;
+			$form.find(options.elementSelector).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				$group = $(<span class="keyword">this</span>);
+				$group.find(options.itemSelector).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					resetElement($group, vars, options, onlyError, $(<span class="keyword">this</span>));
+				});
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-53">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-53">&#182;</a>
+              </div>
+              <p>Reset single element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		resetElement = <span class="function"><span class="keyword">function</span> <span class="params">($group, vars, options, onlyError, $elem)</span> {</span>
+			<span class="keyword">var</span> classesToRemove = options.errorClass + (onlyError === <span class="literal">true</span> ? <span class="string">''</span> : <span class="string">' '</span> + options.validClass),
+				combined = <span class="literal">false</span>;
+			<span class="keyword">if</span> ($elem.parents(options.elementSelector).find(<span class="string">'.error'</span> + options.itemSelector).length &gt; <span class="number">1</span>) {
+				combined = <span class="literal">true</span>;
+			}
+			<span class="keyword">if</span> (combined === <span class="literal">false</span>) {
+				$group.removeClass(classesToRemove).find(options.itemSelector).removeClass(classesToRemove);
+			} <span class="keyword">else</span> {
+				$elem.removeClass(classesToRemove);
+			}
+			$group.find(<span class="string">'label'</span>).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'originalText'</span>) !== <span class="literal">undefined</span>) {
+					$(<span class="keyword">this</span>).text($(<span class="keyword">this</span>).data(<span class="string">'originalText'</span>)).attr(<span class="string">'title'</span>, $(<span class="keyword">this</span>).data(<span class="string">'originalText'</span>));
+				}
+			});
+			$group.parents(<span class="string">'[data-validate-ext]'</span>).find(<span class="string">'label'</span>).each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'originalText'</span>) !== <span class="literal">undefined</span>) {
+					$(<span class="keyword">this</span>).text($(<span class="keyword">this</span>).data(<span class="string">'originalText'</span>)).attr(<span class="string">'title'</span>, $(<span class="keyword">this</span>).data(<span class="string">'originalText'</span>));
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-54">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-54">&#182;</a>
+              </div>
+              <p>Decorate form from external error messages</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		decorateFormFromExternal = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, $form, errs)</span> {</span>
+			<span class="keyword">var</span> $elem,
+				$parent,
+				errors = [];
+
+			resetForm($form, vars, options, <span class="literal">true</span>);
+
+			$.each(errs, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				$elem = $form.find(<span class="string">'[name="'</span> + k + <span class="string">'"]'</span>);
+				$parent = $elem.parents(options.elementSelector);
+				errors.push({
+					messages: [v],
+					element: $elem,
+					group: $parent
+				});
+			});
+
+			decorateForm(vars, options, errors, []);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-55">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-55">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {
+
+			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wValidator'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						$(<span class="keyword">this</span>).data(<span class="string">'wValidator'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wValidatorVars'</span>, vars);
+						initBindings(vars, options);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-56">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-56">&#182;</a>
+              </div>
+              <p>Reset form</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			reset: <span class="function"><span class="keyword">function</span> <span class="params">($form)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wValidator'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wValidatorVars'</span>);
+					vars.submited = <span class="literal">false</span>;
+					resetForm($form, vars, options);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-57">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-57">&#182;</a>
+              </div>
+              <p>Decorate form</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			decorateForm: <span class="function"><span class="keyword">function</span> <span class="params">($form, errors)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wValidator'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wValidatorVars'</span>);
+					decorateFormFromExternal(vars, options, $form, errors);
+				});
+			}
+
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-58">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-58">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wValidator</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wValidator: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wValidator'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

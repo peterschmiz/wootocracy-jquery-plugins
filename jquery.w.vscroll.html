@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.vscroll.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.vscroll.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy vertical scroll plugin</strong>.</p>
+<p><a href="jquery.w.vote.html">Previous Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 27 10:38:01 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wVScroll();</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Vertical scroll plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Handler wrapper jQuery object<br>(you can pass your own handler object)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$handler: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Keyboard navigation enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			keyboardEnabled: <span class="literal">true</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Keyboard navigation speed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			keyboardSpeed: <span class="number">20</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Minimum handler width</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			minHandlerWidth: <span class="number">40</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Maximum handler width (calculated after init)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			maxHandlerWidth: -<span class="number">1</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Scroll event callback function</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			scrollCallback: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Scrollbar wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$scrollBar: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Scroll main wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$scrollWrapper: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Scroll speed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			speed: <span class="number">6</span>
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Handler wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$handler: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Scrollbar wrapper jQuery object </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$scrollbar: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Scroll main wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$scrollWrapper: <span class="literal">null</span>,
+			$wrapper: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Scroll is active</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			active: <span class="literal">true</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Dragging</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			dragging: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Scroll is enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			enabled: <span class="literal">true</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Event bindings are inited</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			eventsBinded: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Fake element for measurement</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			fakeElement: document.createElement(<span class="string">'div'</span>),</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Handler width</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			handlerWidth: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Handler positions</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			handlerOffsetX: <span class="number">0</span>,
+			handlerTranslateX: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Plugin ID</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			id: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Prefixes for feature testing</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			prefixes: [<span class="string">'transform'</span>, <span class="string">'WebkitTransform'</span>, <span class="string">'MozTransform'</span>, <span class="string">'OTransform'</span>, <span class="string">'msTransform'</span>, <span class="string">'none'</span>],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Scroll ratio</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			scrollRatio: <span class="number">1</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Scroll width</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			scrollWrapperWidth: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Scroll position</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			scrollWrapperTranslateX: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Touch mode enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			touchMode: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Touch start position</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			touchStartX: <span class="number">0</span>,
+			touchWrapperPrevPosition: <span class="number">0</span>,
+			touchHandlerPrevPosition: <span class="number">0</span>,
+			transformPrefix: <span class="string">'none'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Simple CSS transform supported</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			transformSupported: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>3D CSS transform supported</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			transform3dSupported: <span class="literal">false</span>,
+			wrapperHeight: <span class="number">0</span>,
+			wrapperOffsetX: <span class="number">0</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Test for CSS transform support</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		testProps = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">while</span> (vars.transformSupported !== <span class="literal">true</span> &amp;&amp; vars.transformSupported !== vars.prefixes.length - <span class="number">1</span>) {
+				vars.transformPrefix = vars.prefixes[vars.transformSupported];
+				vars.transformSupported = vars.fakeElement.style[vars.prefixes[vars.transformSupported++]] !== <span class="literal">undefined</span> || vars.transformSupported;
+			}
+
+			<span class="keyword">if</span> (vars.transformSupported !== <span class="literal">true</span>) {
+				vars.transformSupported = <span class="literal">false</span>;
+			} <span class="keyword">else</span> {
+				<span class="keyword">if</span> ($(<span class="string">'html'</span>).hasClass(<span class="string">'csstransforms3d'</span>)) {
+					vars.transform3dSupported = <span class="literal">true</span>;
+				}
+				<span class="keyword">switch</span> (vars.transformPrefix.toLowerCase()) {
+					<span class="keyword">case</span> <span class="string">'transform'</span>:
+						vars.transformPrefix = <span class="string">'transform'</span>;
+						<span class="keyword">break</span>;
+					<span class="keyword">case</span> <span class="string">'webkittransform'</span>:
+						vars.transformPrefix = <span class="string">'-webkit-transform'</span>;
+						<span class="keyword">break</span>;
+					<span class="keyword">case</span> <span class="string">'moztransform'</span>:
+						vars.transformPrefix = <span class="string">'-moz-transform'</span>;
+						<span class="keyword">break</span>;
+					<span class="keyword">case</span> <span class="string">'otrasform'</span>:
+						vars.transformPrefix = <span class="string">'-o-transform'</span>;
+						<span class="keyword">break</span>;
+					<span class="keyword">case</span> <span class="string">'mstransform'</span>:
+						vars.transformPrefix = <span class="string">'-ms-transform'</span>;
+						<span class="keyword">break</span>;
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Init (cache) the used DOM elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initDOMElements = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">if</span> (options.$scrollbar === <span class="literal">null</span> || options.$handler === <span class="literal">null</span> || options.$scrollWrapper === <span class="literal">null</span>) {
+				$.error(<span class="string">'Please add $scrollbar, $handler, $scrollWrapper element as a jQuery object'</span>);
+			} <span class="keyword">else</span> {
+				vars.$scrollbar = options.$scrollbar;
+				vars.$handler = options.$handler;
+				vars.$scrollWrapper = options.$scrollWrapper;
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			$(window).on({
+				<span class="string">'resize.wscroll'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						setup(vars, options);
+					}, <span class="number">50</span>);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Setup positions, dimensions</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setup = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.wrapperWidth = vars.$wrapper.width();
+			vars.wrapperOffsetX = vars.$wrapper.offset().left;
+			vars.scrollWrapperWidth = vars.$scrollWrapper.width();
+			vars.handlerWidth = (vars.wrapperWidth / vars.scrollWrapperWidth) * vars.wrapperWidth;
+			<span class="keyword">if</span> (vars.handlerWidth &lt; options.minHandlerWidth) { vars.handlerWidth = options.minHandlerWidth; }
+			<span class="keyword">if</span> (vars.handlerWidth &gt; options.maxHandlerWidth &amp;&amp; options.maxHandlerWidth !== -<span class="number">1</span>) { vars.handlerWidth = options.maxHandlerWidth; }
+			resizeHandler(vars.handlerWidth, vars);
+			vars.scrollRatio = (vars.scrollWrapperWidth - vars.wrapperWidth) / (vars.wrapperWidth - vars.handlerWidth) * -<span class="number">1</span>;
+			vars.enabled = vars.scrollRatio &lt; -<span class="number">1</span>;
+			<span class="keyword">if</span> (vars.enabled === <span class="literal">false</span>) {
+				disableScroll(vars, options);
+			} <span class="keyword">else</span> {
+				enableScroll(vars, options);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Disable scroll</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		disableScroll = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.$scrollbar.hide();
+			unbindEvents(vars);
+			resetPositions(vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Enable scroll</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		enableScroll = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.$scrollbar.show();
+			<span class="keyword">if</span> (vars.eventsBinded === <span class="literal">false</span>) {
+				bindEvents(vars, options);
+			}
+			resetPositions(vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Bind events</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		bindEvents = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> ret;
+			vars.$handler.on({
+				<span class="string">'mousedown.wvscroll'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.preventDefault();
+					<span class="keyword">if</span> (e.offsetX !== <span class="literal">undefined</span>) {
+						vars.handlerOffsetX = e.offsetX;
+					} <span class="keyword">else</span> {
+						vars.handlerOffsetX = e.clientX - $(e.currentTarget).offset().left;
+					}
+					vars.dragging = <span class="literal">true</span>;
+				}
+			});
+			vars.$wrapper.on({
+				<span class="string">'mouseover.wvscroll'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					vars.active = <span class="literal">true</span>;
+				},
+				<span class="string">'mouseleave.wvscroll'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					vars.active = <span class="literal">false</span>;
+				},
+				<span class="string">'touchstart.wvscroll'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.stopPropagation();
+					vars.active = <span class="literal">true</span>;
+					vars.touchMode = <span class="literal">true</span>;
+					vars.touchStartX = e.originalEvent.targetTouches[<span class="number">0</span>].pageX;
+				},
+				<span class="string">'touchend.wvscroll'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.stopPropagation();
+					vars.active = <span class="literal">false</span>;
+					vars.touchMode = <span class="literal">false</span>;
+					vars.touchHandlerPrevPosition = vars.handlerTranslateX;
+					vars.touchWrapperPrevPosition = vars.scrollWrapperTranslateX;
+				}
+			});
+
+			$(document).on(<span class="string">'mouseup.'</span> + vars.id, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				vars.dragging = <span class="literal">false</span>;
+				vars.handlerOffsetX = <span class="number">0</span>;
+			});
+			$(document).on(<span class="string">'mousemove.'</span> + vars.id, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+				<span class="keyword">if</span> (vars.dragging === <span class="literal">true</span>) {
+					e.preventDefault();
+					moveByDrag(e, vars, options);
+				}
+			});
+			$(document).on(<span class="string">'touchstart.'</span> + vars.id + <span class="string">'touchend.'</span> + vars.id, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				vars.dragging = <span class="literal">false</span>;
+				vars.touchMode = <span class="literal">false</span>;
+			});
+			$(document).on(<span class="string">'touchmove.'</span> + vars.id, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+				<span class="keyword">if</span> (vars.touchMode === <span class="literal">true</span>) {
+					<span class="keyword">if</span> (Math.abs(vars.touchStartX - (e.originalEvent.targetTouches[<span class="number">0</span>].pageX)) &gt; <span class="number">10</span>) {
+						e.preventDefault();
+						e.stopPropagation();
+						moveByTouch(e.originalEvent, vars, options);
+					}
+				}
+			});
+			$(document).on(<span class="string">'selectstart.'</span> + vars.id, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+				ret = <span class="literal">true</span>;
+				<span class="keyword">if</span> (vars.active === <span class="literal">true</span>) {
+					e.preventDefault();
+					ret = <span class="literal">false</span>;
+				}
+				<span class="keyword">return</span> ret;
+			});
+			$(document).on(<span class="string">'keydown.'</span> + vars.id, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+				<span class="keyword">if</span> (options.keyboardEnabled === <span class="literal">true</span> &amp;&amp; vars.active === <span class="literal">true</span>) {
+					<span class="keyword">if</span> (e.keyCode === <span class="number">37</span>) {
+						e.preventDefault();
+						moveByKey(-options.keyboardSpeed, vars, options);
+					} <span class="keyword">else</span> <span class="keyword">if</span> (e.keyCode === <span class="number">39</span>) {
+						e.preventDefault();
+						moveByKey(options.keyboardSpeed, vars, options);
+					}
+				}
+			});
+
+			vars.eventsBinded = <span class="literal">true</span>;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>Unbind events</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		unbindEvents = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			vars.$handler.off(<span class="string">'.wvscroll'</span>);
+			vars.$wrapper.off(<span class="string">'.wvscroll'</span>);
+			$(document).off(<span class="string">'.'</span> + vars.id);
+			vars.eventsBinded = <span class="literal">false</span>;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>Reset scroller positions</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		resetPositions = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.touchStartX = <span class="number">0</span>;
+			vars.touchWrapperPrevPosition = <span class="number">0</span>;
+			vars.touchHandlerPrevPosition = <span class="number">0</span>;
+			setTransform(vars.$scrollWrapper, <span class="number">0</span>, vars);
+			setTransform(vars.$handler, <span class="number">0</span>, vars);
+			scrollCallback(options, <span class="number">0</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <p>Resize scrollbar handler</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		resizeHandler = <span class="function"><span class="keyword">function</span> <span class="params">(w, vars)</span> {</span>
+			vars.$handler.css({width: w});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <p>Move by dragging</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		moveByDrag = <span class="function"><span class="keyword">function</span> <span class="params">(event, vars, options)</span> {</span>
+			updatePositions(event.originalEvent.pageX - vars.wrapperOffsetX - vars.handlerOffsetX, vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-44">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-44">&#182;</a>
+              </div>
+              <p>Move by touch</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		moveByTouch = <span class="function"><span class="keyword">function</span> <span class="params">(event, vars, options)</span> {</span>
+			updatePositions(vars.touchStartX - (event.targetTouches[<span class="number">0</span>].pageX), vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-45">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-45">&#182;</a>
+              </div>
+              <p>Move by keyboard</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		moveByKey = <span class="function"><span class="keyword">function</span> <span class="params">(delta, vars, options)</span> {</span>
+			updatePositions(parseInt(vars.handlerTranslateX + delta, <span class="number">10</span>), vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-46">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-46">&#182;</a>
+              </div>
+              <p>Update scrolbar positions</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		updatePositions = <span class="function"><span class="keyword">function</span> <span class="params">(x, vars, options)</span> {</span>
+			<span class="keyword">if</span> (vars.enabled === <span class="literal">true</span>) {
+				positionHandler(x, vars);
+				positionWrapper(x, vars, options);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-47">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-47">&#182;</a>
+              </div>
+              <p>Set handler position</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		positionHandler = <span class="function"><span class="keyword">function</span> <span class="params">(x, vars)</span> {</span>
+			<span class="keyword">var</span> maxX = vars.wrapperWidth - vars.handlerWidth;
+			<span class="keyword">if</span> (vars.touchMode === <span class="literal">true</span>) { x = x / -vars.scrollRatio; }
+			x = parseInt(x + vars.touchHandlerPrevPosition, <span class="number">10</span>);
+			<span class="keyword">if</span> (x &lt; <span class="number">0</span>) { x = <span class="number">0</span>; }
+			<span class="keyword">if</span> (x &gt; maxX) { x = maxX; }
+			setTransform(vars.$handler, x, vars);
+			vars.handlerTranslateX = x;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-48">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-48">&#182;</a>
+              </div>
+              <p>Set content position</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		positionWrapper = <span class="function"><span class="keyword">function</span> <span class="params">(x, vars, options)</span> {</span>
+			<span class="keyword">var</span> maxX = vars.scrollWrapperWidth - vars.wrapperWidth;
+			x = vars.touchMode === <span class="literal">true</span> ? x * -<span class="number">1</span> : vars.scrollRatio * x;
+			x = parseInt(x + vars.touchWrapperPrevPosition, <span class="number">10</span>);
+			<span class="keyword">if</span> (x &gt; <span class="number">0</span>) { x = <span class="number">0</span>; }
+			<span class="keyword">if</span> (x * -<span class="number">1</span> &gt; maxX) { x = maxX * -<span class="number">1</span>; }
+			setTransform(vars.$scrollWrapper, x, vars);
+			vars.scrollWrapperTranslateX = x;
+			scrollCallback(options, x);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-49">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-49">&#182;</a>
+              </div>
+              <p>Call callback on scroll</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		scrollCallback = <span class="function"><span class="keyword">function</span> <span class="params">(options, x)</span> {</span>
+			<span class="keyword">if</span> (options.scrollCallback !== <span class="literal">null</span>) {
+				options.scrollCallback.call(<span class="keyword">this</span>, x);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-50">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-50">&#182;</a>
+              </div>
+              <p>Set CSS tranform values</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setTransform = <span class="function"><span class="keyword">function</span> <span class="params">($obj, val, vars)</span> {</span>			
+			<span class="keyword">if</span> (vars.transformSupported === <span class="literal">true</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-51">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-51">&#182;</a>
+              </div>
+              <p>Set CSS3 transform if supported</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">if</span> (vars.transform3dSupported === <span class="literal">true</span>) {
+					$obj.css(vars.transformPrefix, <span class="string">'translate3d('</span> + val + <span class="string">'px, 0, 0)'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-52">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-52">&#182;</a>
+              </div>
+              <p>Or use simple CSS top positioning</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				} <span class="keyword">else</span> {
+					$obj.css(vars.transformPrefix, <span class="string">'translateX('</span> + val + <span class="string">'px)'</span>);
+				}
+			} <span class="keyword">else</span> {
+				$obj.css(<span class="string">'left'</span>, val + <span class="string">'px'</span>);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-53">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-53">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {
+
+			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wVScroll'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wVScroll'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wVScrollVars'</span>, vars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						vars.id = <span class="string">'wvscroll_'</span> + Math.random() * <span class="number">9999999</span>;
+						testProps(vars);
+						initDOMElements(vars, options);
+						initBindings(vars, options);
+						setup(vars, options);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-54">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-54">&#182;</a>
+              </div>
+              <p>Refresh scroll</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			refresh: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wVScroll'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wVScrollVars'</span>);
+					setup(vars, options);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-55">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-55">&#182;</a>
+              </div>
+              <p>Reset scroll</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			reset: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wVScroll'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wVScrollVars'</span>);
+					resetPositions(vars, options);
+				});
+			}
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-56">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-56">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wVScroll</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wVScroll: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wVScroll'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

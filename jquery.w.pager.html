@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.pager.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.pager.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy pager plugin</strong>.</p>
+<p><a href="jquery.w.overlay.html">Previous Plugin</a> | <a href="jquery.w.pictureupload.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 15:09:50 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wPager();</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Pager plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {
+			initPage: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Callback when navigating between pages</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			nextPageCallback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>}
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Current page</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			currentPage: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Indicator wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$indicator: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Indicator is visible</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			indicatorVisible: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Last page was reached</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			lastPageReached: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Maximum pages</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			maxPage: -<span class="number">1</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Mouse down timer id (<code>window.setTimeout</code> ID)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mouseDownTid: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Mouse down delay</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mouseDownDelay: <span class="number">500</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Step timer id (<code>window.setTimeout</code> ID)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			stepPagerTid: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Step delay</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			stepPagerDelay: <span class="number">750</span>,
+			$wrapper: <span class="literal">null</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> pressed, preventPage = <span class="literal">false</span>, $pager;
+			vars.$wrapper.on({
+				<span class="string">'click.pager'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.preventDefault();
+					<span class="keyword">if</span> (preventPage === <span class="literal">false</span>) {
+						$pager = $(<span class="keyword">this</span>);
+						pageList($pager, vars, options);
+					}
+				},
+				<span class="string">'mousedown.pager'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					pressed = <span class="keyword">new</span> Date().getTime();
+					preventPage = <span class="literal">false</span>;
+					$pager = $(<span class="keyword">this</span>);
+					window.clearTimeout(vars.mouseDownTid);
+					vars.mouseDownTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						showPageSteps($pager, vars);
+					}, vars.mouseDownDelay);
+				},
+				<span class="string">'mouseup.pager'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> (pressed + vars.mouseDownDelay &lt; <span class="keyword">new</span> Date().getTime()) {
+						preventPage = <span class="literal">true</span>;
+					}
+					$pager = $(<span class="keyword">this</span>);
+					window.clearTimeout(vars.mouseDownTid);
+					<span class="keyword">if</span> (vars.indicatorVisible === <span class="literal">true</span>) {
+						hidePageSteps(vars);
+						pageList($pager, vars, options, <span class="literal">true</span>);
+					}
+				}
+			}, <span class="string">'.pager:not(.disabled)'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Show page steps </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		showPageSteps = <span class="function"><span class="keyword">function</span> <span class="params">($pager, vars)</span> {</span>
+			<span class="keyword">if</span> (vars.maxPage !== -<span class="number">1</span>) {
+				vars.$indicator.text(parseInt(vars.currentPage + <span class="number">1</span>, <span class="number">10</span>) + <span class="string">'/'</span> + vars.maxPage);
+				vars.$wrapper.addClass(<span class="string">'indicator-visible'</span>);
+				vars.indicatorVisible = <span class="literal">true</span>;
+				stepPager($pager, vars);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Hide page steps</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		hidePageSteps = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			window.clearTimeout(vars.stepPagerTid);
+			vars.$wrapper.removeClass(<span class="string">'indicator-visible'</span>);
+			vars.indicatorVisible = <span class="literal">false</span>;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Step pager (prev or next)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		stepPager = <span class="function"><span class="keyword">function</span> <span class="params">($pager, vars)</span> {</span>
+			window.clearTimeout(vars.stepPagerTid);
+			vars.stepPagerTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				vars.currentPage += $pager.hasClass(<span class="string">'prev'</span>) ? -<span class="number">1</span> : <span class="number">1</span>;
+				<span class="keyword">if</span> (vars.currentPage &lt; <span class="number">0</span>) { vars.currentPage = <span class="number">0</span>; }
+				<span class="keyword">if</span> (vars.currentPage &gt; parseInt(vars.maxPage - <span class="number">1</span>, <span class="number">10</span>)) {
+					vars.currentPage = parseInt(vars.maxPage - <span class="number">1</span>, <span class="number">10</span>);
+				}
+				vars.$indicator.text(parseInt(vars.currentPage + <span class="number">1</span>, <span class="number">10</span>) + <span class="string">'/'</span> + vars.maxPage);
+				stepPager($pager, vars);
+			}, vars.stepPagerDelay);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Page list, call callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		pageList = <span class="function"><span class="keyword">function</span> <span class="params">($pager, vars, options, nochange)</span> {</span>
+			<span class="keyword">if</span> (nochange !== <span class="literal">true</span>) {
+				vars.currentPage += $pager.hasClass(<span class="string">'prev'</span>) ? -<span class="number">1</span> : <span class="number">1</span>;
+				<span class="keyword">if</span> (vars.currentPage &lt; <span class="number">0</span>) { vars.currentPage = <span class="number">0</span>; }
+			}
+			$(window).scrollTop(<span class="number">0</span>);
+			options.nextPageCallback.call(<span class="keyword">this</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Set pager state (button states etc.)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setPagerState = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			showPager(vars);
+			<span class="keyword">if</span> (vars.currentPage === <span class="number">0</span>) { hidePager(<span class="string">'prev'</span>, vars); }
+			<span class="keyword">if</span> (vars.lastPageReached === <span class="literal">true</span> || parseInt(vars.currentPage + <span class="number">1</span>, <span class="number">10</span>) === vars.maxPage) {
+				hidePager(vars.currentPage === <span class="number">0</span> ? <span class="string">'all'</span> : <span class="string">'next'</span>, vars);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Hide pager</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		hidePager = <span class="function"><span class="keyword">function</span> <span class="params">(pager, vars)</span> {</span>
+			vars.$wrapper.show();
+			<span class="keyword">if</span> (pager === <span class="string">'all'</span>) {
+				vars.$wrapper.hide();
+			} <span class="keyword">else</span> <span class="keyword">if</span> (pager === <span class="string">'prev'</span>) {
+				vars.$wrapper.find(<span class="string">'.pager.prev'</span>).addClass(<span class="string">'disabled'</span>);
+			} <span class="keyword">else</span> <span class="keyword">if</span> (pager === <span class="string">'next'</span>) {
+				vars.$wrapper.find(<span class="string">'.pager.next'</span>).addClass(<span class="string">'disabled'</span>);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Show pager</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		showPager = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			vars.$wrapper.show();
+			vars.$wrapper.find(<span class="string">'.pager'</span>).removeClass(<span class="string">'disabled'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Init plugin</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wPager'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wPager'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>, vars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						vars.$indicator = vars.$wrapper.find(<span class="string">'.pager-indicator'</span>);
+						vars.currentPage = options.initPage;
+						initBindings(vars, options);
+						hidePager(<span class="string">'all'</span>, vars);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Reset values, pager</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			reset: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+					vars.currentPage = <span class="number">0</span>;
+					vars.lastPageReached = <span class="literal">false</span>;
+					hidePager(<span class="string">'all'</span>, vars);
+					setPagerState(vars);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Hide pager</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			hide: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+					hidePager(<span class="string">'all'</span>, vars);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Check if last page reached</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			getLastPage: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+				<span class="keyword">return</span> vars.lastPageReached;
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Set last page reached to true</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			setLastPage: <span class="function"><span class="keyword">function</span> <span class="params">(val)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+					vars.lastPageReached = val;
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Update pager (state)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			update: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+					setPagerState(vars);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Get current page</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			getPage: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+				<span class="keyword">return</span> parseInt(vars.currentPage, <span class="number">10</span>);
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Set current page</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			setPage: <span class="function"><span class="keyword">function</span> <span class="params">(page)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+					<span class="keyword">if</span> (page === <span class="string">'++'</span>) {
+						vars.currentPage++;
+					} <span class="keyword">else</span> {
+						vars.currentPage = parseInt(page, <span class="number">10</span>);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Get max page</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			getMaxPage: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+				<span class="keyword">return</span> parseInt(vars.maxPage, <span class="number">10</span>);
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Set max page</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			setMaxPage: <span class="function"><span class="keyword">function</span> <span class="params">(page)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wPagerVars'</span>);
+					vars.maxPage = parseInt(page, <span class="number">10</span>);
+					setPagerState(vars);
+				});
+			}
+
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wPager</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wPager: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wPager'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

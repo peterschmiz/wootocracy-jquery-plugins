@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.complete.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.complete.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy autocomplete plugin</strong>.</p>
+<p><a href="jquery.w.animatefavicon.html">Previous Plugin</a> | <a href="jquery.w.conditionalbottom.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 08:07:23 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wComplete({
+     autoFeed: &#39;products/feed&#39;,
+     grouped: true
+ });</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Autocomplete plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Feed url</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			autoFeed: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Feed update delay</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			autoFeedDelay: <span class="number">250</span>,
+			autoCompleteTarget: <span class="literal">null</span>,
+			autoCompleteTargetKey: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Results are grouped or not</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			grouped: <span class="literal">true</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Group headers</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			groupHeaders: [<span class="string">'Products'</span>, <span class="string">'Categories'</span>, <span class="string">'Brands'</span>],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Default filter</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			filterValues: [<span class="string">'value'</span>],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Dropdown insert mode</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			insertMode: <span class="string">'append'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Prevent default keycodes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			preventKeys: [<span class="number">9</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">38</span>, <span class="number">40</span>],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Suggestion target jQuery selector</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			suggestionSelector: <span class="string">'.suggestion'</span>,
+			tabbed: <span class="literal">true</span>,
+			targetInputSelector: <span class="string">'input[type=search]'</span>,
+			wrapperClassName: <span class="string">'auto-complete'</span>
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Autocomplete is active</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			active: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Feed timer id (<code>window.setTimeout</code> ID)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			autoFeedTid: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Loading animation timer id (<code>window.setTimeout</code> ID)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loadingTid: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Loading animation phase index</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loadingIndex: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Loaded or not</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loaded: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Loading animation loop</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loadingLooped: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>List target wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$list: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Voice recognition</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			recognition: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Feed target jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$target: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Feed input wrapper jQuery object </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$targetInput: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Autocomplete suggestion (hint) jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$targetSuggestion: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Current autocomplete term</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			term: <span class="string">''</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Current terms and categories</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			termsAndCategories: {},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Structured term categories </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			termCategories: {
+				brands: [],
+				products: [],
+				categories: [],
+				subcategories: []
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Voice recognition result</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			transcript: <span class="string">''</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Speech icon jQuery wrapper</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$speech: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Voice recongnition activated</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			speechActivated: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Voice recognition inited</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			speechInited: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Voice recognition enabled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			speechEnabled: <span class="literal">false</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Init (cache) the used DOM elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initDOMElements = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.$list = $(<span class="string">'&lt;div class="'</span> + options.wrapperClassName + <span class="string">'"&gt;&lt;/div&gt;'</span>);
+			<span class="keyword">if</span> (options.insertMode === <span class="string">'append'</span>) {
+				vars.$target.append(vars.$list);
+			} <span class="keyword">else</span> <span class="keyword">if</span> (options.insertMode === <span class="string">'after'</span>) {
+				vars.$target.after(vars.$list);
+			}
+			<span class="keyword">if</span> (options.targetInputSelector !== <span class="string">'self'</span>) {
+				vars.$targetInput = vars.$target.find(options.targetInputSelector);
+			} <span class="keyword">else</span> {
+				vars.$targetInput = vars.$target;
+			}
+			vars.$targetSuggestion = vars.$target.find(options.suggestionSelector);
+			vars.$speech = vars.$target.find(<span class="string">'.speech'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.$targetInput.on({
+				<span class="string">'click.wcomplete'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>If the feed input is empty, then reset plugin</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					<span class="keyword">if</span> ($.trim(vars.$targetInput.val()) === <span class="string">''</span>) { reset(vars, options); }
+				},
+				<span class="string">'keyup.wcomplete'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Do nothing on escape</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					<span class="keyword">if</span> (e.keyCode === <span class="number">27</span>) { e.stopPropagation(); }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Strip input field</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					stripInput(vars);
+					<span class="keyword">if</span> ($.inArray(e.keyCode, [<span class="number">27</span>]) !== -<span class="number">1</span>) { e.stopPropagation(); }
+					<span class="keyword">if</span> ($.trim($(<span class="keyword">this</span>).val()) === <span class="string">''</span>) {
+						reset(vars, options);
+					} <span class="keyword">else</span> <span class="keyword">if</span> (options.autoFeed !== <span class="literal">null</span> &amp;&amp; ($.inArray(e.keyCode, [<span class="number">13</span>, <span class="number">37</span>, <span class="number">38</span>, <span class="number">39</span>, <span class="number">40</span>]) === -<span class="number">1</span>)) {
+						autoFeedList(vars, options);
+					}
+				},
+				<span class="string">'keydown.wcomplete'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					deleteSuggestion(vars);
+					<span class="keyword">if</span> (e.keyCode === <span class="number">27</span>) {
+						e.preventDefault();
+						hideList(vars);
+					} <span class="keyword">else</span> <span class="keyword">if</span> ($.inArray(e.keyCode, [<span class="number">9</span>, <span class="number">13</span>, <span class="number">38</span>, <span class="number">40</span>]) !== -<span class="number">1</span>) {
+						<span class="keyword">if</span> (vars.active === <span class="literal">true</span> &amp;&amp; $.trim(vars.$targetInput.val()) !== <span class="string">''</span>) {
+							navigateList(e, vars, options);
+						}
+					}
+				}
+			});
+			vars.$list.on({
+				<span class="string">'click.wcomplete'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.stopPropagation();
+					<span class="keyword">if</span> (!$(<span class="keyword">this</span>).hasClass(<span class="string">'group-header'</span>)) {
+						selectItem(vars, options, $(<span class="keyword">this</span>).parent().find(<span class="string">'li'</span>).not(<span class="string">'.group-header'</span>).index($(<span class="keyword">this</span>)));
+						hideList(vars);
+					}
+				},
+				<span class="string">'mouseover.wcomplete'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> (!$(<span class="keyword">this</span>).hasClass(<span class="string">'group-header'</span>)) {
+						setSelection(vars, $(<span class="keyword">this</span>).parent().find(<span class="string">'li'</span>).not(<span class="string">'.group-header'</span>).index($(<span class="keyword">this</span>)));
+					}
+				}
+			}, <span class="string">'ul li'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Voice recognition</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.$speech.on({
+				<span class="string">'click.wcomplete'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> (vars.speechInited === <span class="literal">false</span>) {
+						initSpeech(vars);
+					}
+					reset(vars, options);
+					vars.transcript = <span class="string">''</span>;
+					<span class="keyword">if</span> (vars.speechActivated === <span class="literal">true</span>) {
+						vars.recognition.stop();
+						vars.speechActivated = <span class="literal">false</span>;
+						vars.$speech.removeClass(<span class="string">'rec'</span>);
+					} <span class="keyword">else</span> {
+						vars.recognition.lang = <span class="string">'en'</span>;
+						vars.recognition.start();
+						vars.speechActivated = <span class="literal">true</span>;
+						vars.$speech.addClass(<span class="string">'rec'</span>);
+					}
+				}
+			});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Hide list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$(document).on({
+				<span class="string">'click.wcomplete'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					hideList(vars, <span class="literal">true</span>);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Init voice recognition</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initSpeech = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">if</span> (window.webkitSpeechRecognition !== <span class="literal">undefined</span>) {
+				vars.recognition = <span class="keyword">new</span> webkitSpeechRecognition();
+				vars.recognition.continuous = <span class="literal">false</span>;
+				vars.recognition.interimResults = <span class="literal">true</span>;
+				vars.speechEnabled = <span class="literal">true</span>;
+
+				vars.recognition.onresult = <span class="function"><span class="keyword">function</span> <span class="params">(event)</span> {</span>
+					recognitionReady(event, vars);
+				};
+				vars.recognition.onerror = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					vars.speechActivated = <span class="literal">false</span>;
+					vars.$speech.removeClass(<span class="string">'rec'</span>);
+					vars.recognition.stop();
+				};
+				vars.recognition.onend = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					vars.speechActivated = <span class="literal">false</span>;
+					vars.$speech.removeClass(<span class="string">'rec'</span>);
+					vars.recognition.stop();
+				};
+			}
+			vars.speechInited = <span class="literal">true</span>;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>Recognition result</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		recognitionReady = <span class="function"><span class="keyword">function</span> <span class="params">(event, vars)</span> {</span>
+			<span class="keyword">var</span> interim_transcript = <span class="string">''</span>, i;
+
+			<span class="keyword">for</span> (i = event.resultIndex; i &lt; event.results.length; ++i) {
+				<span class="keyword">if</span> (event.results[i].isFinal) {
+					vars.transcript += event.results[i][<span class="number">0</span>].transcript;
+				} <span class="keyword">else</span> {
+					interim_transcript += event.results[i][<span class="number">0</span>].transcript;
+				}
+			}
+			vars.transcript = $.trim(vars.transcript).toLowerCase();
+			vars.term = vars.transcript;
+			vars.$targetInput.val(vars.term);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>Strip input (tags, html, script etc.)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		stripInput = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">if</span> (vars.$targetInput.val().search(<span class="regexp">/(&lt;([^&gt;]+)&gt;)/ig</span>, <span class="string">''</span>) !== -<span class="number">1</span>) {
+				vars.$targetInput.val(vars.$targetInput.val().replace(<span class="regexp">/(&lt;([^&gt;]+)&gt;)/ig</span>, <span class="string">''</span>));
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <p>Get autocomplete list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		autoFeedList = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> term = $.trim(vars.$targetInput.val()),
+				$list = vars.$list,
+				currentIndex = parseInt($list.data(<span class="string">'currentIndex'</span>), <span class="number">10</span>);
+			window.clearTimeout(vars.autoFeedTid);
+			vars.term = term;
+			vars.autoFeedTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				$.ajax({
+					type: <span class="string">'GET'</span>,
+					url: options.autoFeed,
+					data: {term: term},
+					success: <span class="function"><span class="keyword">function</span> <span class="params">(result)</span> {</span>
+						buildList(vars, options, result);
+					}
+				});
+			}, options.autoFeedDelay);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <p>Build autocomplete list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		buildList = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, data)</span> {</span>
+			<span class="keyword">var</span> items = <span class="string">''</span>,
+				$list = vars.$list;
+			$list.data({currentIndex: <span class="number">0</span>}).empty();
+			vars.loaded = <span class="literal">true</span>;
+			vars.active = <span class="literal">false</span>;
+			<span class="keyword">if</span> (data.length &gt; <span class="number">0</span>) {
+				items = createList(vars, options.grouped === <span class="literal">true</span> ? sortData(vars, data) : data, items, options);
+				$list.append(<span class="string">'&lt;ul&gt;'</span> + items + <span class="string">'&lt;/ul&gt;'</span>);
+				setSelection(vars, -<span class="number">1</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-44">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-44">&#182;</a>
+              </div>
+              <p>Set suggestion</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				setSuggestion(vars, options);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-45">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-45">&#182;</a>
+              </div>
+              <p>Show dropdown</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				showList(vars);
+			} <span class="keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-46">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-46">&#182;</a>
+              </div>
+              <p>Hide dropdown</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				hideList(vars);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-47">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-47">&#182;</a>
+              </div>
+              <p>Construct dropdown list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		createList = <span class="function"><span class="keyword">function</span> <span class="params">(vars, data, items, options)</span> {</span>
+			<span class="keyword">var</span> listLength = <span class="number">0</span>,
+				rowDataAttributes = <span class="string">''</span>;
+
+			$.each(data, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				<span class="keyword">if</span> (v.group !== <span class="literal">undefined</span>) {
+					items += <span class="string">'&lt;li class="group-header"&gt;'</span> + options.groupHeaders[v.group] + <span class="string">'&lt;/li&gt;'</span>;
+				} <span class="keyword">else</span> {
+					rowDataAttributes = createRowDataAttributes(vars, options, v);
+					items += <span class="string">'&lt;li '</span> + rowDataAttributes + <span class="string">'&gt;'</span> + v.value + <span class="string">'&lt;/li&gt;'</span>;
+					listLength++;
+				}
+			});
+			vars.$list.data({length: listLength});
+			<span class="keyword">return</span> items;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-48">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-48">&#182;</a>
+              </div>
+              <p>Create dropdown list item attributes (category, subcategory)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		createRowDataAttributes = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, value)</span> {</span>
+			<span class="keyword">var</span> attributes = <span class="string">''</span>;
+			$.each(value, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				<span class="keyword">if</span> ($.inArray(k, options.filterValues) === -<span class="number">1</span> &amp;&amp; (v <span class="keyword">instanceof</span> Array === <span class="literal">false</span>)) {
+					attributes += <span class="string">'data-'</span> + k + <span class="string">'="'</span> + v + <span class="string">'" '</span>;
+				}
+			});
+			<span class="keyword">if</span> (value.type === <span class="number">1</span>) {
+				attributes += <span class="string">'data-categories="'</span> + value.category.join(<span class="string">','</span>) + <span class="string">'" data-subcategory="'</span> + value.value + <span class="string">'" '</span>;
+			}
+			<span class="keyword">return</span> $.trim(attributes);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-49">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-49">&#182;</a>
+              </div>
+              <p>Sort data, make groups</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		sortData = <span class="function"><span class="keyword">function</span> <span class="params">(vars, data)</span> {</span>
+			<span class="keyword">var</span> orderedData = [],
+				groupedData = [],
+				prevType = <span class="literal">null</span>,
+				tempItem;
+			$.each(data, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				<span class="keyword">if</span> (v.type === <span class="number">3</span>) {
+					tempItem = $.extend({}, v);
+					tempItem.type = <span class="number">2</span>;
+					orderedData.push(tempItem);
+					tempItem = $.extend({}, v);
+					tempItem.type = <span class="number">0</span>;
+					orderedData.push(tempItem);
+				} <span class="keyword">else</span> {
+					orderedData.push(v);
+				}
+			});
+			orderedData.sort(<span class="function"><span class="keyword">function</span> <span class="params">(obj1, obj2)</span> {</span>
+				<span class="keyword">return</span> obj2.type - obj1.type;
+			});
+			$.each(orderedData, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				<span class="keyword">if</span> (prevType === <span class="literal">null</span> || prevType !== v.type) {
+					prevType = v.type;
+					groupedData.push({group: v.type});
+				}
+				groupedData.push(v);
+			});
+			<span class="keyword">return</span> groupedData;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-50">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-50">&#182;</a>
+              </div>
+              <p>Hide dropdown</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		hideList = <span class="function"><span class="keyword">function</span> <span class="params">(vars, noFocus)</span> {</span>
+			vars.active = <span class="literal">false</span>;
+			vars.$list.hide();
+			deleteSuggestion(vars);
+			<span class="keyword">if</span> (noFocus !== <span class="literal">true</span>) {
+				vars.$targetInput.focus();
+			}
+			vars.$target.parents(<span class="string">'.input-grp'</span>).removeClass(<span class="string">'autocomplete-focus'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-51">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-51">&#182;</a>
+              </div>
+              <p>Show dropdown</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		showList = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			vars.active = <span class="literal">true</span>;
+			vars.$list.show();
+			vars.$targetInput.focus();
+			vars.$target.parents(<span class="string">'.input-grp'</span>).addClass(<span class="string">'autocomplete-focus'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-52">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-52">&#182;</a>
+              </div>
+              <p>Dropdown navigation controller</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		navigateList = <span class="function"><span class="keyword">function</span> <span class="params">(e, vars, options)</span> {</span>
+			<span class="keyword">var</span> $list = vars.$list,
+				currentIndex = parseInt($list.data(<span class="string">'currentIndex'</span>), <span class="number">10</span>),
+				l = parseInt($list.data(<span class="string">'length'</span>), <span class="number">10</span>),
+				cancelEvent = <span class="literal">false</span>;
+
+			<span class="keyword">switch</span> (e.keyCode) {
+				<span class="keyword">case</span> <span class="number">9</span>:
+					cancelEvent = <span class="literal">true</span>;
+					<span class="keyword">if</span> (currentIndex === -<span class="number">1</span>) { currentIndex = <span class="number">0</span>; }
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="number">13</span>:
+					vars.term = $.trim(vars.$targetInput.val());
+					cancelEvent = <span class="literal">true</span>;
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="number">38</span>:
+					cancelEvent = <span class="literal">true</span>;
+					<span class="keyword">if</span> (currentIndex === -<span class="number">1</span>) {
+						currentIndex = l - <span class="number">1</span>;
+					} <span class="keyword">else</span> {
+						currentIndex = currentIndex - <span class="number">1</span> &lt; <span class="number">0</span> ? -<span class="number">1</span> : currentIndex - <span class="number">1</span>;
+					}
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="number">40</span>:
+					cancelEvent = <span class="literal">true</span>;
+					<span class="keyword">if</span> (currentIndex === -<span class="number">1</span>) {
+						currentIndex = <span class="number">0</span>;
+					} <span class="keyword">else</span> {
+						currentIndex = currentIndex + <span class="number">1</span> &gt; l - <span class="number">1</span> ? -<span class="number">1</span> : currentIndex + <span class="number">1</span>;
+					}
+					<span class="keyword">break</span>;
+				<span class="keyword">default</span>:
+					<span class="keyword">break</span>;
+			}
+
+			<span class="keyword">if</span> (cancelEvent === <span class="literal">true</span>) {
+				<span class="keyword">if</span> ($.inArray(e.keyCode, options.preventKeys) !== -<span class="number">1</span>) {
+					e.preventDefault();
+					e.stopImmediatePropagation();
+				}
+				<span class="keyword">if</span> ($.inArray(e.keyCode, [<span class="number">9</span>, <span class="number">13</span>, <span class="number">27</span>]) !== -<span class="number">1</span>) {
+					deleteSuggestion(vars);
+					hideList(vars);
+				} <span class="keyword">else</span> {
+					setSuggestion(vars, options, currentIndex);
+				}
+				<span class="keyword">if</span> ($.inArray(e.keyCode, [<span class="number">9</span>, <span class="number">13</span>]) === -<span class="number">1</span>) {
+					setSelection(vars, currentIndex);
+				}
+				<span class="keyword">if</span> (e.keyCode !== <span class="number">13</span>) {
+					selectItem(vars, options, currentIndex, e.keyCode);
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-53">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-53">&#182;</a>
+              </div>
+              <p>Set dropdown selection</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setSelection = <span class="function"><span class="keyword">function</span> <span class="params">(vars, index)</span> {</span>
+			<span class="keyword">var</span> $list = vars.$list;
+			vars.$list.data({currentIndex: index});
+			<span class="keyword">if</span> (index === -<span class="number">1</span>) {
+				vars.$targetInput.focus();
+				$list.find(<span class="string">'ul li'</span>).not(<span class="string">'.group-header'</span>).removeClass(<span class="string">'selected'</span>);
+			} <span class="keyword">else</span> {
+				$list.find(<span class="string">'ul li'</span>).not(<span class="string">'.group-header'</span>).eq(index).addClass(<span class="string">'selected'</span>).siblings().removeClass(<span class="string">'selected'</span>);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-54">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-54">&#182;</a>
+              </div>
+              <p>Set feed suggestion (hint)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setSuggestion = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, index)</span> {</span>
+			<span class="keyword">var</span> term = vars.term,
+				termArr = term.split(<span class="string">' '</span>),
+				text = <span class="string">''</span>;
+
+			<span class="keyword">if</span> (index === <span class="literal">undefined</span> || index === -<span class="number">1</span>) { index = <span class="number">0</span>; }
+
+			<span class="keyword">if</span> (options.tabbed === <span class="literal">true</span>) {
+				termArr.pop();
+				text = termArr.join(<span class="string">' '</span>);
+			}
+			text = (text !== <span class="string">''</span> ? text + <span class="string">' '</span> : <span class="string">''</span>) + vars.$list.find(<span class="string">'ul li'</span>).not(<span class="string">'.group-header'</span>).eq(index).text();
+
+			vars.$targetSuggestion.val(text);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-55">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-55">&#182;</a>
+              </div>
+              <p>Select dropdown item, add to the terms and categories</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		selectItem = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, index, keyCode)</span> {</span>
+			<span class="keyword">var</span> $elem = <span class="literal">null</span>,
+				term = vars.term,
+				termArr = term.split(<span class="string">' '</span>),
+				text = <span class="string">''</span>;
+
+			<span class="keyword">if</span> (options.tabbed === <span class="literal">true</span>) {
+				<span class="keyword">if</span> (keyCode !== <span class="number">13</span>) {
+					termArr.pop();
+				}
+				text = termArr.join(<span class="string">' '</span>);
+			}
+
+			<span class="keyword">if</span> (index !== -<span class="number">1</span>) {
+				$elem = vars.$list.find(<span class="string">'ul li'</span>).not(<span class="string">'.group-header'</span>).eq(index);
+				<span class="keyword">if</span> (keyCode !== <span class="number">13</span>) {
+					text = (text !== <span class="string">''</span> ? text + <span class="string">' '</span> : <span class="string">''</span>) + $elem.text();
+				}
+				<span class="keyword">if</span> (options.autoCompleteTarget !== <span class="literal">null</span>) {
+					options.autoCompleteTarget.val($elem.attr(options.autoCompleteTargetKey));
+				}
+			} <span class="keyword">else</span> {
+				<span class="keyword">if</span> (text === <span class="string">''</span>) { text = term; }
+				<span class="keyword">if</span> (options.autoCompleteTarget !== <span class="literal">null</span>) {
+					options.autoCompleteTarget.val(<span class="literal">null</span>);
+				}
+			}
+
+			<span class="keyword">if</span> (keyCode === <span class="number">9</span> || (keyCode === <span class="number">13</span> &amp;&amp; index !== -<span class="number">1</span>)) {
+				text += <span class="string">' '</span>;
+			}
+
+			<span class="keyword">if</span> (keyCode === <span class="number">9</span> || (keyCode === <span class="number">13</span> &amp;&amp; index !== -<span class="number">1</span>) || keyCode === <span class="literal">undefined</span>) {
+				addToTermCategories(vars, $elem);
+			}
+
+			vars.$targetInput.val(text);
+			checkTermCategories(vars);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-56">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-56">&#182;</a>
+              </div>
+              <p>Add item to terms and categories</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		addToTermCategories = <span class="function"><span class="keyword">function</span> <span class="params">(vars, $elem)</span> {</span>
+			<span class="keyword">var</span> type = parseInt($elem.attr(<span class="string">'data-type'</span>), <span class="number">10</span>),
+				val = $elem.text(),
+				termCategories = vars.termCategories,
+				brands = termCategories.brands,
+				categories = termCategories.categories,
+				subcategories = termCategories.subcategories,
+				products = termCategories.products,
+				rawCategories;
+
+			<span class="keyword">switch</span> (type) {
+				<span class="keyword">case</span> <span class="number">0</span>:
+					<span class="keyword">if</span> ($.inArray(val, products) === -<span class="number">1</span>) { products.push(val); }
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="number">1</span>:
+					rawCategories = $elem.attr(<span class="string">'data-categories'</span>).split(<span class="string">','</span>);
+					vars.termsAndCategories[val] = rawCategories;
+					$.each(rawCategories, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> <span class="keyword">if</span> ($.inArray(v, categories) === -<span class="number">1</span>) { categories.push(v); } });
+					<span class="keyword">if</span> ($.inArray($elem.attr(<span class="string">'data-subcategory'</span>), subcategories) === -<span class="number">1</span>) { subcategories.push($elem.attr(<span class="string">'data-subcategory'</span>)); }
+					<span class="keyword">break</span>;
+				<span class="keyword">case</span> <span class="number">2</span>:
+					<span class="keyword">if</span> ($.inArray(val, brands) === -<span class="number">1</span>) { brands.push(val); }
+					<span class="keyword">break</span>;
+				<span class="keyword">default</span>:
+					<span class="keyword">break</span>;
+			}
+
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-57">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-57">&#182;</a>
+              </div>
+              <p>Check term duplications or missing terms</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		checkTermCategories = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">var</span> term = $.trim(vars.$targetInput.val()),
+				termCategories = vars.termCategories,
+				brands = termCategories.brands,
+				categories = termCategories.categories,
+				subcategories = termCategories.subcategories,
+				products = termCategories.products,
+				termsAndCategories = vars.termsAndCategories,
+				toDelete = [],
+				toDeleteFromTermsAndCategories = [];
+
+			$.each(brands, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> <span class="keyword">if</span> (term.search(v) === -<span class="number">1</span>) { toDelete.push(k); } });
+			$.each(toDelete, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> brands.splice(v, <span class="number">1</span>); });
+
+			toDelete = [];
+			$.each(termsAndCategories, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span>
+				<span class="keyword">if</span> (term.search(v) === -<span class="number">1</span>) {
+					toDelete.push($.inArray(v, categories));
+					toDeleteFromTermsAndCategories.push(k);
+				}
+			});
+			$.each(toDelete, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> categories.splice(v, <span class="number">1</span>); });
+			$.each(toDeleteFromTermsAndCategories, <span class="function"><span class="keyword">function</span> <span class="params">(k)</span> {</span>
+				<span class="keyword">delete</span> termsAndCategories[k];
+			});
+
+			toDelete = [];
+			$.each(subcategories, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> <span class="keyword">if</span> (term.search(v) === -<span class="number">1</span>) { toDelete.push(k); } });
+			$.each(toDelete, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> subcategories.splice(v, <span class="number">1</span>); });
+
+			toDelete = [];
+			$.each(products, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> <span class="keyword">if</span> (term.search(v) === -<span class="number">1</span>) { toDelete.push(k); } });
+			$.each(toDelete, <span class="function"><span class="keyword">function</span> <span class="params">(k, v)</span> {</span> products.splice(v, <span class="number">1</span>); });
+
+			termCategories.brands = brands;
+			termCategories.categories = categories;
+			termCategories.subcategories = subcategories;
+			termCategories.products = products;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-58">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-58">&#182;</a>
+              </div>
+              <p>Delete feed suggestion (hint)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		deleteSuggestion = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			vars.$targetSuggestion.val(<span class="string">''</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-59">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-59">&#182;</a>
+              </div>
+              <p>Show loading animation</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		showLoading = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">if</span> ($.trim(vars.$targetInput.val()) !== <span class="string">''</span>) {
+				vars.$target.removeClass(<span class="string">'loading-1 loading-2 loading-3 loading-4 loading-5'</span>).addClass(<span class="string">'loading loading-'</span> + parseInt(vars.loadingIndex + <span class="number">1</span>, <span class="number">10</span>));
+				vars.loadingTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					vars.loadingIndex++;
+					<span class="keyword">if</span> (vars.loadingIndex &gt; <span class="number">3</span>) {
+						vars.loadingIndex = <span class="number">0</span>;
+						vars.loadingLooped = <span class="literal">true</span>;
+					}
+					<span class="keyword">if</span> (vars.loaded &amp;&amp; vars.loadingLooped) {
+						hideLoading(vars);
+					} <span class="keyword">else</span> {
+						showLoading(vars);
+					}
+				}, <span class="number">101</span>);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-60">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-60">&#182;</a>
+              </div>
+              <p>Hide loading animation</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		hideLoading = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			window.clearTimeout(vars.loadingTid);
+			vars.$target.removeClass(<span class="string">'loading loading-1 loading-2 loading-3 loading-4 loading-5'</span>);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-61">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-61">&#182;</a>
+              </div>
+              <p>Reset autocomplete (set to default)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		reset = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.queries = [];
+			vars.termCategories = {
+				brands: [],
+				products: [],
+				categories: [],
+				subcategories: []
+			};
+			vars.$list.data({originalQuery: <span class="string">''</span>, currentIndex: -<span class="number">1</span>});
+			vars.term = <span class="string">''</span>;
+			window.clearTimeout(vars.autoFeedTid);
+			<span class="keyword">if</span> (options.autoCompleteTarget !== <span class="literal">null</span>) {
+				options.autoCompleteTarget.val(<span class="literal">null</span>);
+			}
+			vars.$targetInput.val(<span class="literal">null</span>);
+			deleteSuggestion(vars);
+			hideList(vars);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-62">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-62">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-63">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-63">&#182;</a>
+              </div>
+              <p>Init plugin</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wComplete'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wComplete'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wCompleteVars'</span>, vars);
+						vars.$target = $(<span class="keyword">this</span>);
+						<span class="keyword">if</span> (vars.$target.attr(<span class="string">'data-autocomplete-feed'</span>) !== <span class="literal">undefined</span>) {
+							options.autoFeed = vars.$target.attr(<span class="string">'data-autocomplete-feed'</span>);
+						}
+						<span class="keyword">if</span> (vars.$target.attr(<span class="string">'data-autocomplete-target'</span>) !== <span class="literal">undefined</span>) {
+							options.autoCompleteTarget = $(vars.$target.attr(<span class="string">'data-autocomplete-target'</span>).split(<span class="string">'|'</span>)[<span class="number">0</span>].toString());
+							options.autoCompleteTargetKey = vars.$target.attr(<span class="string">'data-autocomplete-target'</span>).split(<span class="string">'|'</span>)[<span class="number">1</span>];
+						}
+						initDOMElements(vars, options);
+						initBindings(vars, options);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-64">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-64">&#182;</a>
+              </div>
+              <p>Build dropdown list form data<br><em>data:</em> feed data, <code>JSON</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			build: <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wComplete'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wCompleteVars'</span>);
+					buildList(vars, options, data);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-65">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-65">&#182;</a>
+              </div>
+              <p>Set feed term and feed input value<br><em>term:</em> feed term, <code>String</code><br><em>setValue:</em> input value, <code>String</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			setTerm: <span class="function"><span class="keyword">function</span> <span class="params">(term, setValue)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wCompleteVars'</span>);
+					vars.term = term;
+					<span class="keyword">if</span> (setValue !== <span class="literal">undefined</span>) {
+						vars.$targetInput.val(term);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-66">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-66">&#182;</a>
+              </div>
+              <p>Get term categories</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			getTermCategories: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wCompleteVars'</span>);
+				<span class="keyword">return</span> vars.termCategories;
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-67">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-67">&#182;</a>
+              </div>
+              <p>Show loading animation </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loading: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wCompleteVars'</span>);
+					vars.loaded = <span class="literal">false</span>;
+					vars.loadingLooped = <span class="literal">false</span>;
+					showLoading(vars);
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-68">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-68">&#182;</a>
+              </div>
+              <p>Reset plugin to defaults</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			reset: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wComplete'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wCompleteVars'</span>);
+					vars.loaded = <span class="literal">false</span>;
+					vars.loadingLooped = <span class="literal">false</span>;
+					reset(vars, options);
+				});
+			}
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-69">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-69">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wComplete</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wComplete: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wComplete'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

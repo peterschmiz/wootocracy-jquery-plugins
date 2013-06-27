@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.search.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.search.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy search plugin</strong>.</p>
+<p><a href="jquery.w.scroll.html">Previous Plugin</a> | <a href="jquery.w.sfx.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 16:25:09 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wSearch();</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Search plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Set default mode (array index)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			defaultMode: <span class="number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>jQuery selector for the input</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			inputSelector: <span class="string">'.query'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>jQuery selector for the suggestion part</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			suggestionSelector: <span class="string">'.suggestion'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Fun (easter egg) callback function</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			funCallback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Key-up callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			keyUpCallback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Key up delay in millisec</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			keyUpDelay: <span class="number">200</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Search modes (used as CSS classes also)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			modes: [<span class="string">'mode-1'</span>, <span class="string">'mode-2'</span>],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Prevent default action for these keycodes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			preventKeys: [<span class="number">16</span>, <span class="number">17</span>, <span class="number">18</span>, <span class="number">35</span>, <span class="number">36</span>, <span class="number">37</span>, <span class="number">38</span>, <span class="number">39</span>, <span class="number">40</span>],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Submit callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			submitCallback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Switching between modes enabled or not</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			switchEnabled: <span class="literal">true</span>
+		},
+
+		defaultVars = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Current search mode</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			currentMode: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Delay timer id (<code>window.setTimeout</code> ID)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			delayTid: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Fun (easter egg) is active</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			funActive: <span class="literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Search input wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$input: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Search wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$search: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Suggestion wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$suggestion: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Switch wrapper jQuery object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$<span class="keyword">switch</span>: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Tooltip is active or not</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			tooltipActive: <span class="literal">false</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Init (cache) the used DOM elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initDOMElements = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			vars.$input = vars.$search.find(options.inputSelector);
+			vars.$<span class="keyword">switch</span> = vars.$search.find(<span class="string">'.switch'</span>);
+			vars.$suggestion = vars.$search.find(options.suggestionSelector);
+			<span class="keyword">if</span> (vars.$suggestion.length &lt; <span class="number">1</span>) { vars.$suggestion = <span class="literal">null</span>; }
+			<span class="keyword">if</span> (options.switchEnabled === <span class="literal">true</span>) {
+				options.switchEnabled = vars.$<span class="keyword">switch</span>.length &gt; <span class="number">0</span>;
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Check DOM structure</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="keyword">if</span> (vars.$input.length === <span class="number">0</span> || (vars.$<span class="keyword">switch</span>.length === <span class="number">0</span> &amp;&amp; options.switchEnabled)) {
+				$.error(<span class="string">'This is not a valid wSearch structure!'</span>);
+			}
+			<span class="keyword">if</span> (options.switchEnabled === <span class="literal">false</span>) {
+				vars.$search.addClass(<span class="string">'no-switch'</span>);
+			} <span class="keyword">else</span> {
+				vars.$search.removeClass(<span class="string">'no-switch'</span>);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> hoverClasses = [],
+				modeClass = <span class="string">''</span>;
+
+			$.each(options.modes, <span class="function"><span class="keyword">function</span> <span class="params">(k)</span> {</span>
+				hoverClasses.push(<span class="string">'hover-'</span> + options.modes[k]);
+			});
+
+			vars.$search.find(<span class="string">'form'</span>).on({
+				<span class="string">'submit'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					e.preventDefault();
+				}
+			});
+			vars.$input.on({
+				<span class="string">'click.wsearch touchstart.wsearch'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					<span class="keyword">if</span> (e.type === <span class="string">'touchstart'</span>) {
+						vars.$input.focus();
+						window.scrollTo(<span class="number">0</span>, <span class="number">1</span>);
+					}
+					vars.$search.addClass(<span class="string">'focus'</span>);
+					<span class="keyword">if</span> ($.trim($(<span class="keyword">this</span>).val()) !== <span class="string">''</span>) {
+						<span class="keyword">if</span> (options.keyUpCallback !== <span class="literal">null</span>) {
+							keyUpAction(e, vars, options);
+						}
+					}
+				},
+				<span class="string">'keyup.wsearch'</span>: <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> {</span>
+					checkFun(vars, options);
+					<span class="keyword">if</span> (vars.funActive === <span class="literal">false</span>) {
+						<span class="keyword">if</span> (vars.tooltipActive === <span class="literal">false</span>) {
+							<span class="keyword">if</span> (e.keyCode === <span class="number">13</span>) {
+								<span class="keyword">if</span> (options.submitCallback !== <span class="literal">null</span>) {
+									submitAction(e, vars, options);
+								}
+							} <span class="keyword">else</span> <span class="keyword">if</span> ($.inArray(e.keyCode, options.preventKeys) === -<span class="number">1</span> &amp;&amp; $.trim($(<span class="keyword">this</span>).val()) !== <span class="string">''</span>) {
+								<span class="keyword">if</span> (options.keyUpCallback !== <span class="literal">null</span>) {
+									keyUpAction(e, vars, options);
+								}
+							}
+						}
+					}
+				}
+			});
+			<span class="keyword">if</span> (options.switchEnabled === <span class="literal">true</span>) {
+				vars.$<span class="keyword">switch</span>.on({
+					<span class="string">'click.wsearch'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						modeClass = $.trim($(<span class="keyword">this</span>).attr(<span class="string">'class'</span>).replace(<span class="string">'use-sprite'</span>, <span class="string">''</span>));
+						switchMode(modeClass, vars, options);
+					},
+					<span class="string">'mouseenter.wsearch'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						<span class="keyword">if</span> ($.trim(vars.$input.val()) === <span class="string">''</span>) {
+							modeClass = $.trim($(<span class="keyword">this</span>).attr(<span class="string">'class'</span>).replace(<span class="string">'use-sprite'</span>, <span class="string">''</span>));
+							vars.$<span class="keyword">switch</span>.removeClass(<span class="string">'hover '</span> + hoverClasses.join(<span class="string">' '</span>)).addClass(<span class="string">'hover hover-'</span> + modeClass);
+							vars.tooltipActive = <span class="literal">true</span>;
+							showToolTip(<span class="literal">false</span>, modeClass, vars, options);
+						}
+					},
+					<span class="string">'mouseleave.wsearch'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						<span class="keyword">if</span> ($.trim(vars.$input.val()) === <span class="string">''</span> &amp;&amp; vars.tooltipActive === <span class="literal">true</span>) {
+							vars.$<span class="keyword">switch</span>.removeClass(<span class="string">'hover '</span> + hoverClasses.join(<span class="string">' '</span>));
+							vars.tooltipActive = <span class="literal">false</span>;
+							restorePlaceholder(vars);
+							restoreQuery(vars);
+						}
+					}
+				}, <span class="string">'span'</span>);
+			}
+			$(document).on({
+				<span class="string">'click.wsearch'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					vars.$search.removeClass(<span class="string">'focus'</span>);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Check for easter-egg input</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		checkFun = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> val = $.trim(vars.$input.val());</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Check for &#39;:&#39;</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.funActive = val.search(<span class="regexp">/\:/ig</span>) === <span class="number">0</span>;
+			<span class="keyword">if</span> (vars.funActive === <span class="literal">true</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Call fun callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">if</span> (options.keyUpCallback !== <span class="literal">null</span>) {
+					funAction(val, vars, options);
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Init search mode switcher</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initSwitch = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">if</span> (options.switchEnabled === <span class="literal">true</span>) {
+				vars.$<span class="keyword">switch</span>.find(<span class="string">'span'</span>).each(<span class="function"><span class="keyword">function</span> <span class="params">(i)</span> {</span>
+					$(<span class="keyword">this</span>).addClass(options.modes[i]);
+				});
+				vars.currentMode = options.modes[options.defaultMode];
+				vars.$<span class="keyword">switch</span>.addClass(vars.currentMode);
+				setSwitch(vars.currentMode, vars, options);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Keyup actions</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		keyUpAction = <span class="function"><span class="keyword">function</span> <span class="params">(e, vars, options)</span> {</span>
+			window.clearTimeout(vars.delayTid);
+			vars.delayTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				options.keyUpCallback(vars.$search, [
+					{event: e, query: vars.$input.val(), mode: vars.currentMode}
+				]);
+			}, options.keyUpDelay);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Call submit callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		submitAction = <span class="function"><span class="keyword">function</span> <span class="params">(e, vars, options)</span> {</span>
+			options.submitCallback(vars.$search, [
+				{event: e, query: $.trim(vars.$input.val()), mode: vars.currentMode}
+			]);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Call fun (easter-egg) callback </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		funAction = <span class="function"><span class="keyword">function</span> <span class="params">(val, vars, options)</span> {</span>
+			options.funCallback(vars.$search, [
+				{ term: val }
+			]);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Switch search mode</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		switchMode = <span class="function"><span class="keyword">function</span> <span class="params">(mode, vars, options)</span> {</span>
+			vars.currentMode = mode;
+			setSwitch(vars.currentMode, vars, options);
+			<span class="keyword">if</span> ($.trim(vars.$input.val()) === <span class="string">''</span>) {
+				showToolTip(<span class="literal">true</span>, mode, vars, options);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Set search mode switch (CSS class)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setSwitch = <span class="function"><span class="keyword">function</span> <span class="params">(mode, vars, options)</span> {</span>
+			vars.$<span class="keyword">switch</span>.removeClass(options.modes.join(<span class="string">' '</span>)).addClass(mode);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Show search mode tooltip</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		showToolTip = <span class="function"><span class="keyword">function</span> <span class="params">(set, mode, vars, options)</span> {</span>
+			<span class="keyword">var</span> tooltip = <span class="string">''</span>,
+				tooltipMode1 = vars.$<span class="keyword">switch</span>.find(<span class="string">'span.'</span> + options.modes[<span class="number">0</span>]).attr(<span class="string">'data-tooltip'</span>),
+				tooltipMode2 = vars.$<span class="keyword">switch</span>.find(<span class="string">'span.'</span> + options.modes[<span class="number">1</span>]).attr(<span class="string">'data-tooltip'</span>);
+
+			<span class="keyword">if</span> (mode === options.modes[<span class="number">0</span>]) {
+				tooltip = tooltipMode1;
+			} <span class="keyword">else</span> {
+				tooltip = tooltipMode2;
+			}
+
+			<span class="keyword">if</span> (vars.$input.data(<span class="string">'originalTooltip'</span>) === <span class="literal">undefined</span>) {
+				vars.$input.data({originalTooltip: vars.$input.attr(<span class="string">'placeholder'</span>)});
+			}
+
+			<span class="keyword">if</span> (vars.$input.val() !== tooltipMode1 &amp;&amp; vars.$input.val() !== tooltipMode2) {
+				vars.$input.data({originalQuery: vars.$input.val()});
+			}
+
+			<span class="keyword">if</span> ($.trim(vars.$input.attr(<span class="string">'placeholder'</span>)) !== tooltip &amp;&amp; vars.$input.val() === <span class="string">''</span>) {
+				vars.$input.attr(<span class="string">'placeholder'</span>, tooltip);
+			}
+
+			<span class="keyword">if</span> (vars.$input.val() !== <span class="string">''</span> &amp;&amp; $.trim(vars.$input.val()) !== tooltip) {
+				vars.$input.val(tooltip);
+			}
+
+			<span class="keyword">if</span> (set === <span class="literal">true</span>) {
+				vars.$input.data({originalTooltip: tooltip});
+			}
+			<span class="keyword">if</span> (vars.$suggestion !== <span class="literal">null</span>) {
+				vars.$suggestion.hide();
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Restore search placeholder</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		restorePlaceholder = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">var</span> original = vars.$input.data(<span class="string">'originalTooltip'</span>);
+			<span class="keyword">if</span> (original !== <span class="literal">undefined</span>) {
+				vars.$input.attr(<span class="string">'placeholder'</span>, original);
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Restore search query</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		restoreQuery = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">var</span> original = vars.$input.data(<span class="string">'originalQuery'</span>);
+			<span class="keyword">if</span> (original !== <span class="literal">undefined</span>) {
+				vars.$input.val(original);
+				<span class="keyword">if</span> (vars.$suggestion !== <span class="literal">null</span>) {
+					vars.$suggestion.show();
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {
+
+			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wSearch'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wSearch'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wSearchVars'</span>, vars);
+						vars.$search = $(<span class="keyword">this</span>);
+						initDOMElements(vars, options);
+						initBindings(vars, options);
+						initSwitch(vars, options);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Switch search mode<br><em>mode:</em> mode, <code>String</code> </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			switchMode: <span class="function"><span class="keyword">function</span> <span class="params">(mode)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> vars = $(<span class="keyword">this</span>).data(<span class="string">'wSearchVars'</span>),
+						options = $(<span class="keyword">this</span>).data(<span class="string">'wSearch'</span>);
+					vars.currentMode = mode;
+					setSwitch(mode, vars, options);
+				});
+			}
+
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wSearch</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wSearch: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wSearch'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

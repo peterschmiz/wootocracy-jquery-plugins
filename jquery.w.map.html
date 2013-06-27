@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.w.map.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="jquery.w.activity.html">
+                jquery.w.activity.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.animatefavicon.html">
+                jquery.w.animatefavicon.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.complete.html">
+                jquery.w.complete.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.conditionalbottom.html">
+                jquery.w.conditionalbottom.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.list.html">
+                jquery.w.list.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.map.html">
+                jquery.w.map.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.overlay.html">
+                jquery.w.overlay.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pager.html">
+                jquery.w.pager.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.pictureupload.html">
+                jquery.w.pictureupload.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.popup.html">
+                jquery.w.popup.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.score.html">
+                jquery.w.score.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.scroll.html">
+                jquery.w.scroll.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.search.html">
+                jquery.w.search.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.sfx.html">
+                jquery.w.sfx.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.tabvis.html">
+                jquery.w.tabvis.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.thumbnail.html">
+                jquery.w.thumbnail.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.userinfo.html">
+                jquery.w.userinfo.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.validator.html">
+                jquery.w.validator.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vote.html">
+                jquery.w.vote.js
+              </a>
+            
+              
+              <a class="source" href="jquery.w.vscroll.html">
+                jquery.w.vscroll.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.w.map.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p><strong>Wootocracy map plugin</strong>.</p>
+<p><a href="jquery.w.list.html">Previous Plugin</a> | <a href="jquery.w.overlay.html">Next Plugin</a></p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <pre><code> Wootocracy
+ http://wootocracy.com
+ Copyright 2013, CarnationGroup, a part of POSSIBLE
+ Date: Mon Jun 26 14:54:10 2013 +0100</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code> Sample usage
+ $(.target).wMap();</code></pre>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>Map plugin for jQuery</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="function"><span class="keyword">function</span> <span class="params">($)</span> {</span>
+
+	<span class="keyword">var</span> defaultOptions = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Path to the SVG map</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mapSVG: <span class="string">'static/i/svg/worldmap.'</span> + WOOT.assetVersion + <span class="string">'.svgz'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>URL for the map data</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mapDataUrl: <span class="literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Map ratio (width / height)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mapRatio: <span class="number">2000</span> / <span class="number">1294</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Map render is ready callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mapReadyCallback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> },</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Map resize callback</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mapResizeCallback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> }
+		},
+
+		defaultVars = {
+			cityCanvas: <span class="literal">null</span>,
+			cityCtx: <span class="literal">null</span>,
+			cities: [],
+			mapCanvas: <span class="literal">null</span>,
+			mapCtx: <span class="literal">null</span>,
+			resizeTid: <span class="literal">null</span>,
+			redraw: <span class="literal">false</span>,
+			$wrapper: <span class="literal">null</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Init (cache) the used DOM elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initDOMElements = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Init event bindings</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initBindings = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			$(window).on({
+				<span class="string">'resize.wmap'</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					window.clearTimeout(vars.resizeTid);
+					vars.resizeTid = window.setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						resizeMap(vars, options);
+					}, <span class="number">200</span>);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Init map, create canvas elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initMap = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> w = vars.$wrapper.width(),
+				h = Math.ceil(vars.$wrapper.width() / options.mapRatio);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Create map layer</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.mapCanvas = document.createElement(<span class="string">'canvas'</span>);
+			vars.mapCtx = vars.mapCanvas.getContext(<span class="string">'2d'</span>);
+			vars.mapCanvas.setAttribute(<span class="string">'width'</span>, w);
+			vars.mapCanvas.setAttribute(<span class="string">'height'</span>, h);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Create city layer</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			vars.cityCanvas = document.createElement(<span class="string">'canvas'</span>);
+			vars.cityCtx = vars.cityCanvas.getContext(<span class="string">'2d'</span>);
+			vars.cityCanvas.setAttribute(<span class="string">'width'</span>, w);
+			vars.cityCanvas.setAttribute(<span class="string">'height'</span>, h);
+
+			vars.$wrapper.css({height: h});
+			vars.$wrapper.append(vars.mapCanvas);
+			vars.$wrapper.append(vars.cityCanvas);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Load map SVG</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			loadMapSVG(vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Load map SVG</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		loadMapSVG = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			$.ajax({
+				url: options.mapSVG,
+				type: <span class="string">'GET'</span>,
+				success: <span class="function"><span class="keyword">function</span> <span class="params">(result)</span> {</span>
+					options.mapSVG = result;
+					setCanvasBackground(vars, options);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Parse SVG to canvas with <code>canvg</code> plugin</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setCanvasBackground = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">if</span> (canvg !== <span class="literal">undefined</span>) {
+				canvg(vars.mapCanvas, options.mapSVG, {
+					ignoreMouse: <span class="literal">true</span>,
+					ignoreAnimation: <span class="literal">true</span>,
+					ignoreDimensions: <span class="literal">true</span>,
+					vars: vars,
+					options: options,
+					renderCallback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						mapReady(<span class="keyword">this</span>.vars, <span class="keyword">this</span>.options);
+					},
+					forceRedraw: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+						<span class="keyword">return</span> refreshMap(<span class="keyword">this</span>.vars, <span class="keyword">this</span>.options);
+					}
+				});
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Map is loaded and ready</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mapReady = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			options.mapReadyCallback.call(<span class="keyword">this</span>);
+			loadCities(vars, options);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Load city datas</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		loadCities = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> url = vars.$wrapper.attr(<span class="string">'data-url'</span>);
+			$.ajax({
+				type: <span class="string">'GET'</span>,
+				url: url,
+				dataType: <span class="string">'json'</span>,
+				success: <span class="function"><span class="keyword">function</span> <span class="params">(result)</span> {</span>
+					initCities(vars, options, result.data);
+				}
+			});
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Set city properties (position, votes, etc.)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		initCities = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options, result)</span> {</span>
+			<span class="keyword">var</span> i = <span class="number">0</span>,
+				l = result.length,
+				coord,
+				corrX = (vars.$wrapper.width() / <span class="number">8192</span>) * <span class="number">266</span>,
+				corrY = (vars.$wrapper.width() / <span class="number">100</span>) * <span class="number">4.17</span>,
+				city = {};
+
+			<span class="keyword">for</span> (i; i &lt; l; i++) {
+				city = {};
+				city.city = result[i].name;
+				city.pos = result[i].geometry;
+				city.id = result[i]._id;
+				city.action = result[i].votes;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Convert GPS coordinates to pixels</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				coord = gpsToPixels(city.pos.lat, city.pos.lon, vars.$wrapper.width(), vars.$wrapper.width());
+
+				city.pos.x = Math.round(coord.x - corrX);
+				city.pos.y = Math.round(coord.y - corrY);
+				city.radius = <span class="number">0</span>;
+				city.showdata = <span class="literal">false</span>;
+
+				<span class="keyword">if</span> (city.action.ownz === <span class="literal">undefined</span>) {
+					city.action.ownz = <span class="number">0</span>;
+				}
+				<span class="keyword">if</span> (city.action.woot === <span class="literal">undefined</span>) {
+					city.action.woot = <span class="number">0</span>;
+				}
+				<span class="keyword">if</span> (city.action.list === <span class="literal">undefined</span>) {
+					city.action.list = <span class="number">0</span>;
+				}
+
+				city.action.sum = city.action.ownz + city.action.woot + city.action.list;
+				city.action.ownz_percent = Math.round((city.action.ownz / city.action.sum) * <span class="number">100</span>);
+				city.action.woot_percent = Math.round((city.action.woot / city.action.sum) * <span class="number">100</span>);
+				city.action.list_percent = <span class="number">100</span> - city.action.ownz_percent - city.action.woot_percent;
+
+				vars.cities.push(city);
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Render cities to canvas</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			renderCities(vars);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Refresh map</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		refreshMap = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> res = <span class="literal">false</span>;
+			<span class="keyword">if</span> (vars.redraw === <span class="literal">true</span>) {
+				vars.redraw = <span class="literal">false</span>;
+				res = <span class="literal">true</span>;
+				options.mapResizeCallback.call(<span class="keyword">this</span>);
+			}
+			<span class="keyword">return</span> res;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Resize map</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		resizeMap = <span class="function"><span class="keyword">function</span> <span class="params">(vars, options)</span> {</span>
+			<span class="keyword">var</span> w = vars.$wrapper.width(),
+				h = Math.ceil(vars.$wrapper.width() / options.mapRatio);
+			vars.mapCanvas.setAttribute(<span class="string">'width'</span>, w);
+			vars.mapCanvas.setAttribute(<span class="string">'height'</span>, h);
+			vars.cityCanvas.setAttribute(<span class="string">'width'</span>, w);
+			vars.cityCanvas.setAttribute(<span class="string">'height'</span>, h);
+			vars.$wrapper.css({height: h});
+			vars.redraw = <span class="literal">true</span>;
+			renderCities(vars);
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Render city datas to canvas</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		renderCities = <span class="function"><span class="keyword">function</span> <span class="params">(vars)</span> {</span>
+			<span class="keyword">var</span> city,
+				dotcolor,
+				i = <span class="number">0</span>,
+				j,
+				lastend,
+				actions = [<span class="string">'ownz'</span>, <span class="string">'woot'</span>, <span class="string">'list'</span>],
+				percent = <span class="number">0</span>,
+				actionColors = [<span class="string">'#4139d7'</span>, <span class="string">'#45be81'</span>, <span class="string">'#ff6060'</span>],
+				l = vars.cities.length;
+
+			<span class="keyword">for</span> (i; i &lt; l; i++) {
+				city = vars.cities[i];
+				dotcolor = <span class="string">'#4139d7'</span>;
+				lastend = <span class="number">0</span>;
+				j = <span class="number">0</span>;
+
+				<span class="keyword">if</span> (city.action.woot &gt; city.action.ownz &amp;&amp; city.action.woot &gt; city.action.list) { dotcolor = <span class="string">'#45be81'</span>; }
+				<span class="keyword">if</span> (city.action.list &gt; city.action.woot &amp;&amp; city.action.list &gt; city.action.ownz) { dotcolor = <span class="string">'#ff6060'</span>; }
+				<span class="keyword">if</span> (city.action.ownz &gt; city.action.list &amp;&amp; city.action.ownz &gt; city.action.woot) { dotcolor = <span class="string">'#4139d7'</span>; }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Generate pie-charts</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="keyword">for</span> (j; j &lt; actions.length; j++) {
+					percent = city.action[actions[j] + <span class="string">'_percent'</span>] / <span class="number">100</span>;
+
+					vars.cityCtx.fillStyle = actionColors[j];
+					vars.cityCtx.beginPath();
+					vars.cityCtx.moveTo(city.pos.x, city.pos.y);
+					vars.cityCtx.arc(city.pos.x, city.pos.y, <span class="number">10</span>, lastend, lastend + (Math.PI * <span class="number">2</span> * percent), <span class="literal">false</span>);
+					vars.cityCtx.lineTo(city.pos.x, city.pos.y);
+					vars.cityCtx.fill();
+
+					lastend += Math.PI * <span class="number">2</span> * percent;
+				}
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>GPS to pixels converter</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		gpsToPixels = <span class="function"><span class="keyword">function</span> <span class="params">(lat, lng, w, h)</span> {</span>
+			<span class="keyword">var</span> xPixelToDegreeRatio = w / <span class="number">360</span>,
+				yPixelToDegreeRatio = w / (<span class="number">2</span> * Math.PI),
+				origin = {x: w / <span class="number">2</span>, y: h / <span class="number">2</span>},
+				point = {},
+				f;
+
+			point.x = Math.round(origin.x + (lng * xPixelToDegreeRatio));
+			f = Math.min(Math.max(Math.sin(lat * (Math.PI / <span class="number">180</span>)), -<span class="number">0.9999</span>), <span class="number">0.9999</span>);
+			point.y = Math.round(origin.y + <span class="number">0.5</span> * Math.log((<span class="number">1</span> + f) / (<span class="number">1</span> - f)) * -yPixelToDegreeRatio);
+
+			<span class="keyword">return</span> point;
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Plugin methods</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		methods = {
+
+			init: <span class="function"><span class="keyword">function</span> <span class="params">(opts)</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">if</span> ($(<span class="keyword">this</span>).data(<span class="string">'wMap'</span>) === <span class="literal">undefined</span>) {
+						<span class="keyword">var</span> options = $.extend({}, defaultOptions, opts),
+							vars = $.extend({}, defaultVars);
+						$(<span class="keyword">this</span>).data(<span class="string">'wMap'</span>, options);
+						$(<span class="keyword">this</span>).data(<span class="string">'wMapVars'</span>, vars);
+						vars.$wrapper = $(<span class="keyword">this</span>);
+						initDOMElements(vars);
+						initBindings(vars, options);
+						initMap(vars, options);
+					}
+				});
+			},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Refresh map and re-load cities</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			refresh: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+				<span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+					<span class="keyword">var</span> options = $(<span class="keyword">this</span>).data(<span class="string">'wMap'</span>),
+						vars = $(<span class="keyword">this</span>).data(<span class="string">'wMapVars'</span>);
+					loadCities(vars, options);
+				});
+			}
+
+		};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Extend jQuery with <code>wMap</code></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$.fn.extend({
+		wMap: <span class="function"><span class="keyword">function</span> <span class="params">(method)</span> {</span>
+			<span class="keyword">var</span> result;
+			<span class="keyword">if</span> (methods[method]) {
+				result = methods[method].apply(<span class="keyword">this</span>, Array.prototype.slice.call(arguments, <span class="number">1</span>));
+			} <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> method === <span class="string">'object'</span> || !method) {
+				result = methods.init.apply(<span class="keyword">this</span>, arguments);
+			} <span class="keyword">else</span> {
+				$.error(<span class="string">'Method '</span> + method + <span class="string">' does not exist on jQuery.wMap'</span>);
+				result = <span class="literal">false</span>;
+			}
+			<span class="keyword">return</span> result;
+		}
+	});
+
+}(jQuery));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
